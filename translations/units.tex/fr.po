@@ -467,9 +467,7 @@ msgstr ""
 #: sections/units.tex:178
 #, no-wrap
 msgid ""
-"\\textit{The Skeletons take 3 damage \\includesvg[height=10px]{\\svgs/damage.svg} from the Spell.\n"
-"  Their Defense \\includesvg[height=10px]{\\svgs/defense.svg} of 1 does not reduce the damage, because it only applies against attacks.\n"
-"  The Skeletons have a HP \\includesvg[height=10px]{\\svgs/health_points.svg} of only 2, so they are now turned to their ``Few'' side and 1 leftover damage \\includesvg[height=10px]{\\svgs/damage.svg} is placed on them.\n"
+"\\textit{The Skeletons take 3 damage \\includesvg[height=10px]{\\svgs/damage.svg} from the Spell.\n  Their Defense \\includesvg[height=10px]{\\svgs/defense.svg} of 1 does not reduce the damage, because it only applies against attacks.\n  The Skeletons have a HP \\includesvg[height=10px]{\\svgs/health_points.svg} of only 2, so they are now turned to their ``Few'' side and 1 leftover damage \\includesvg[height=10px]{\\svgs/damage.svg} is placed on them.\n"
 "}\n"
 "\n"
 msgstr ""

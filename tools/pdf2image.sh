@@ -9,4 +9,5 @@ else
   LAST_PAGE=$3
 fi
 
-pdftoppm main_${LANGUAGE}.pdf ${LANGUAGE} -f ${FIRST_PAGE} -l ${LAST_PAGE} -png
+pdftoppm main_${LANGUAGE}.pdf screenshots/${LANGUAGE} -f ${FIRST_PAGE} -l ${LAST_PAGE} -png
+echo "Done. Images saved to screenshots directory."

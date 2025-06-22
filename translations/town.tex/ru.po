@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-06 18:37+0300\n"
+"POT-Creation-Date: 2025-03-05 22:02+0000\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -18,17 +18,27 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
+#. type: Plain text
+#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
+#: sections/combat.tex:5 sections/components.tex:5 sections/credits.tex:6
+#: sections/deckbuilding.tex:5 sections/difficulty.tex:5
+#: sections/map_elements.tex:5 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/trading.tex:5
+msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
+msgstr ""
+
 #. type: multicols
-#: sections/all_map_locations.tex:5 sections/all_map_locations.tex:411
-#: sections/credits.tex:7 sections/deckbuilding.tex:5
-#: sections/expansion_content.tex:5 sections/expansion_content.tex:49
+#: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
+#: sections/all_map_locations.tex:421 sections/combat.tex:7
+#: sections/credits.tex:10 sections/deckbuilding.tex:7
+#: sections/difficulty.tex:7 sections/expansion_content.tex:5
 #: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
-#: sections/map_elements.tex:34 sections/map_elements.tex:74
-#: sections/other_rules.tex:4 sections/other_rules.tex:33
-#: sections/player_turns.tex:5 sections/resources.tex:5
+#: sections/map_elements.tex:79 sections/map_elements.tex:124
+#: sections/player_turns.tex:7 sections/resources.tex:7
 #: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:5 sections/town.tex:5 sections/units.tex:5
-#: sections/units.tex:119
+#: sections/setup.tex:58 sections/town.tex:7 sections/trading.tex:7
+#: sections/units.tex:5 sections/units.tex:198
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -36,12 +46,10 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/all_map_locations.tex:115 sections/all_map_locations.tex:124
-#: sections/credits.tex:20 sections/credits.tex:24 sections/deckbuilding.tex:57
-#: sections/deckbuilding.tex:149 sections/expansion_content.tex:57
-#: sections/game_modes.tex:25 sections/round_structure.tex:28
-#: sections/setup.tex:64 sections/town.tex:28 sections/town.tex:34
-#: sections/units.tex:77
+#: sections/all_map_locations.tex:134 sections/credits.tex:38
+#: sections/credits.tex:42 sections/round_structure.tex:28
+#: sections/round_structure.tex:33 sections/setup.tex:117 sections/town.tex:30
+#: sections/town.tex:36 sections/units.tex:134
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -55,21 +63,21 @@ msgid "\\addsection{Town}{\\skills/artillery.png}"
 msgstr "\\addsection{Город}{\\skills/artillery.png}"
 
 #. type: multicols*
-#: sections/town.tex:26
+#: sections/town.tex:28
 #, no-wrap
 msgid ""
-"\\hypertarget{Town}{Each}\\index{Town} Faction has their own Town, located in the center of their Starting Tile.\n"
-"The Town is your most important location, as many Scenarios \\hyperlink{End}{may end} if it's \\hyperlink{Categories}{Flagged} by an enemy Hero.\\par\n"
+"\\pagetarget{Town}{Each}\\index{Town} Faction has their own Town, located in the center of their Starting Tile.\n"
+"The Town is your most important location, as many Scenarios \\pagelink{End}{may end} if it's \\pagelink{Categories}{Flagged} by an enemy Hero.\\par\n"
 "The contents of your Town and overall Faction status are represented by the Town Board.\n"
 "It shows your currently built Buildings, Resource costs for future Buildings, your Resource incomes, and status of Town Action Tokens.\\par\n"
 "All Factions are able to Build the following Buildings\\index{Buildings} in their Town:\n"
 "\\begin{itemize}\n"
 "  \\item \\textbf{City Hall} – Provides Resource income or a Faction-Specific Ability.\n"
 "  \\item \\textbf{Citadel} – Allows you to Reinforce Units when using the Population Token.\n"
-"Also \\hyperlink{Walls}{protects your Town} when it is attacked.\n"
+"Also \\pagelink{Walls}{protects your Town} when it is attacked.\n"
 "  \\item \\textbf{Unit Dwellings} – Allows you to Recruit Units.\n"
-"Dwellings have three Levels that unlock new Units, which must be Built in the following order:\\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/Golden.svg}\n"
-"  \\item \\textbf{Mage Guild}\\index{Mage Guild} - gains you \\hyperlink{spells}{Spells}.\n"
+"Dwellings have three Levels that unlock new Units, which must be Built in the following order: \\svgunit{bronze}\\svgunit{silver}\\svgunit{golden}\n"
+"  \\item \\textbf{Mage Guild}\\index{Mage Guild} - gains you \\pagelink{spells}{Spells}.\n"
 "  \\item \\textbf{Faction Building} - a Faction-Specific Building with a unique effect.\n"
 "\\end{itemize}\n"
 "\\textbf{One Building} may be Built each Round by using the Build Token\\index{Build Token}.\n"
@@ -80,22 +88,22 @@ msgid ""
 "Some Building Tiles are double-sided, and may later be upgraded and flipped to represent two different buildings at the same time. Such upgrades must be \\textbf{Built in order}.\\par\n"
 "\n"
 msgstr ""
-"\\hypertarget{Town}{У каждой}\\index{Town} Фракции есть собственный город, расположенный в центре стартового элемента карты.\n"
-"Город является вашей самой важной локацией, так как многие сценарии \\hyperlink{End}{могут завершиться}, если его \\hyperlink{Categories}{захватит} вражеский герой.\\par\n"
-"Карта города отображает возведённые здания, стоимость возведения будущих зданий и особенности каждого из них, \n"
+"\\pagetarget{Town}{У каждой}\\index{Город} фракции есть собственный город, расположенный в центре стартового фрагмента карты.\n"
+"Город является вашей самой важной локацией, так как многие сценарии \\pagelink{End}{могут завершиться}, если его \\pagelink{Categories}{захватит} вражеский герой.\\par\n"
+"Доска города отображает возведённые здания, стоимость строительства будущих зданий и особенности каждого из них, \n"
 "а также информацию о добыче ресурсов и статус жетонов действий города.\\par\n"
-"Все Фракции могут возвести следующие постройки\\index{Buildings} в своем городе:\n"
+"Все фракции могут возвести следующие здания\\index{Город!здания} в своем городе:\n"
 "\\begin{itemize}\n"
-"  \\item \\textbf{Ратуша} – предоставляет ресурсы или уникальные для Фракции возможности.\n"
-"  \\item \\textbf{Цитадель} – позволяет улучшать отряды, используя жетон популяции.\n"
-"Также \\hyperlink{Walls}{защищает город} во время атаки.\n"
-"  \\item \\textbf{Жилища отрядов} – позволяет нанимать отряды.\n"
-"Жилища имеют три уровня, дающих доступ к новым отрядам, и должны быть построены в следующем порядке:\\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/Golden.svg}\n"
-"  \\item \\textbf{Гильдия магов}\\index{Mage Guild} - предоставляет \\hyperlink{spells}{заклинания}.\n"
-"  \\item \\textbf{Здания Фракции} - уникальные для Фракции постройки с особенным эффектом.\n"
+"  \\item \\textbf{Ратуша} — предоставляет ресурсы или уникальные для фракции возможности.\n"
+"  \\item \\textbf{Цитадель} — позволяет улучшать отряды, используя жетон популяции.\n"
+"Также \\pagelink{Walls}{защищает город} во время атаки.\n"
+"  \\item \\textbf{Жилища отрядов} — позволяют нанимать отряды.\n"
+"Существует три уровня Жилищ, каждый из которых даёт доступ к отрядам соответствующего уровня. Строительство ведётся в следующем порядке: \\svgunit{bronze}\\svgunit{silver}\\svgunit{golden}\n"
+"  \\item \\textbf{Гильдия магов}\\index{Гильдия магов} — предоставляет \\pagelink{spells}{заклинания}.\n"
+"  \\item \\textbf{Здания фракции} — уникальные для фракции здания с особым эффектом.\n"
 "\\end{itemize}\n"
-"В каждом раунде может быть построено \\textbf{только одно здание} с использованием жетона строительства\\index{Build Token}.\n"
-"Чтобы построить здание, оплатите его стоимость в ресурсах, переверните жетон строительства лицом вниз и поместите карточку нового здания в отведённый ему слот на карте города.\n"
+"В каждом раунде может быть построено \\textbf{только одно здание} с использованием жетона строительства\\index{Строительство, жетон}.\n"
+"Чтобы построить здание, оплатите его стоимость в ресурсах, переверните жетон строительства лицом вниз и поместите карточку нового здания в отведённое ей место на доске города.\n"
 "Если здание имеет мгновенный эффект после возведения, сразу выполните его.\\par\n"
 "Возведённые здания всегда представлены символом в круге.\n"
 "Здания, которые могут быть построены в будущем, представлены в прямоугольнике, содержащим стоимость постройки в ресурсах.\n"
@@ -103,11 +111,11 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/town.tex:32
+#: sections/town.tex:34
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth]{\\art/earthquake.png}\n"
+"  \\transparent{0.3}\\includegraphics[width=\\linewidth]{\\art/earthquake.png}\n"
 "\\end{center}\n"
 "\n"
 msgstr ""

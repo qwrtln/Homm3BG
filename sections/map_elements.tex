@@ -1,8 +1,10 @@
 % !TeX spellcheck = en_US
 \addsection{Map Elements}{\skills/logistics.png}
 
+\iftoggle{printable}{\vspace{-\baselineskip}}{}
+
 \begin{multicols*}{2}
-Each Scenario is built using four types of Map Tiles.
+Each Scenario is built using four types of \pagetarget{Map}{Map} Tiles.
 Players start on their Faction-Specific Starting (I) Tile.
 Other tiles may be placed and discovered as described on the next page.
 During the game's setup, all face-down tiles should be selected randomly from the pool of possible Tiles as described by the Scenario and shuffled, keeping them face-down.\par
@@ -11,23 +13,23 @@ Starting (I) Tiles are the easiest while Center (VI–VII) Tiles are the most di
 
 \vfill
 \begin{center}
-  \includegraphics[width=0.7\linewidth]{\art/counterstrike.png}
+  \transparent{0.3}\includegraphics[width=0.6\linewidth]{\art/counterstrike.png}
 \end{center}
 \vfill
 
 \subsection*{Map Tile Anatomy\index{Map Tile}}
 Each Map Tile is divided into 7 separate \textbf{Fields} that your Heroes can \textbf{Visit}.
 When your Hero moves to a Field, they must immediately Visit it, or
-first start a \hyperlink{Combat}{Combat} against the enemies guarding it before Visiting.
+first start a \pagelink{Combat}{Combat} against the enemies guarding it before Visiting.
 Empty Fields\index{Empty Field} do nothing when Visited.
 Solid yellow lines on a Field's edge cannot be passed through.
-\hyperlink{Difficulty}{Roman numerals} written on a Field indicate that the Field is guarded by Neutral enemies that must be fought to Visit it.\par
+\pagelink{Difficulty}{Roman numerals} written on a Field indicate that the Field is guarded by Neutral enemies that must be fought to Visit it.\par
 \columnbreak
 \includegraphics[width=\linewidth]{\images/maptiles.png}
 \begin{itemize}
   \footnotesize
   \item[\textbf{1.}] Starting Map Tiles: I
-  \item[\textbf{2.}] Far Map Tiles: II-II
+  \item[\textbf{2.}] Far Map Tiles: II-III
   \item[\textbf{3.}] Near Map Tiles: IV-V
   \item[\textbf{4.}] Center Map Tiles: VI-VII
 \end{itemize}
@@ -75,8 +77,8 @@ Solid yellow lines on a Field's edge cannot be passed through.
 
 \begin{multicols}{2}
 
-\subsection*{\hypertarget{Categories}{Location Categories}}
-Visiting Fields provides Heroes with benefits, such as gaining Resources or Cards (see \hyperlink{All Map Locations}{All Map Locations}).
+\subsection*{\pagetarget{Categories}{Location Categories}}
+Visiting Fields provides Heroes with benefits, such as gaining Resources or Cards (see \pagelink{All Map Locations}{All Map Locations}).
 There are three categories of Fields:
 \begin{itemize}
   \item \textbf{Visitable} – Once you Visit this field, place a Black Cube on it.
@@ -90,8 +92,8 @@ There are three categories of Fields:
     You may pay 1 MP to Visit this Field again.
 \end{itemize}
 
-\subsection*{\hypertarget{Placing}{Placing and Discovering New Tiles}}\index{Discovering Tiles}
-Heroes may spend 1 MP to either reveal an adjacent face-down Tile, or to place a Far (II–III) Map Tile from their own supply of Tiles.
+\subsection*{\pagetarget{Placing}{Placing and Discovering New Tiles}}\index{Discovering Tiles}
+Heroes may spend 1 MP to either reveal an adjacent face-down Tile, or to place a Far (II–III) Map Tile from their own supply of Tiles (scenario rules determine the Tiles in your own supply).
 All face-down Tiles should be kept \textbf{hidden from all players} until they are about to be placed or revealed.
 New tiles must be placed adjacent to the Hero who spends the MP, and connected to at least two other existing Tiles.
 New Tiles must also be positioned so that there is a valid path that eventually connects them with all other Tiles.
@@ -104,6 +106,7 @@ You may always rotate Map Tiles when placing or revealing them.
 
 \end{multicols}
 
+\vspace*{-1em}
 \begin{figure*}[!hb]
   \centering
   \includegraphics[width=\textwidth]{\images/placement.png}
@@ -120,14 +123,14 @@ You may always rotate Map Tiles when placing or revealing them.
 
 \begin{multicols*}{2}
 
-\textit{Alice wants to capture an adjacent \hyperlink{Mines}{Mine} by Flagging it with her Main Hero, Sandro the Necromancer.
-    She spends 1 MP to move onto the Mine, which begins \hyperlink{Combat}{Combat} against Neutral Units, since the Field has a \hyperlink{Difficulty}{Difficulty Rating} and has not been previously Flagged by any player.}\par
+\textit{Alice wants to capture an adjacent \pagelink{Mines}{Mine} by Flagging it with her Main Hero, Sandro the Necromancer.
+    She spends 1 MP to move onto the Mine, which begins \pagelink{Combat}{Combat} against Neutral Units, since the Field has a \pagelink{Difficulty}{Difficulty Rating} and has not been previously Flagged by any player.}\par
 
 \includegraphics[width=1.1\linewidth]{\examples/sandro_takes_mine.png}
 
-\textit{The Mine turns out to be guarded by Troglodytes, which have 3 HP \includesvg[height=0.8\baselineskip]{\svgs/health_points.svg}.
+\textit{The Mine turns out to be guarded by Troglodytes, which have 3 HP \svg{health_points}.
 Alice's current hand consists of a Power Card, a Lightning Bolt, Haste, and a Town Portal.
-During the Combat, she casts the Lightning Bolt, and Empowers \includesvg[height=0.8\baselineskip]{\svgs/empower.svg} it with Haste's alternative (bottom) effect, which makes the Lightning Bolt deal 3 damage \includesvg[height=0.8\baselineskip]{\svgs/damage.svg}, killing the Troglodytes and winning the Combat.}
+During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it with Haste's alternative (bottom) effect, which makes the Lightning Bolt deal 3 damage \svg{damage}, killing the Troglodytes and winning the Combat.}
 
 \includegraphics[width=\linewidth]{\examples/sandro_empowering_lightning_bolt.png}
 
@@ -135,14 +138,14 @@ During the Combat, she casts the Lightning Bolt, and Empowers \includesvg[height
 
 
 \textit{Alice now Flags the Mine by placing one of her Faction Cubes on it.
-    Flagging this particular Mine increases her Building Materials \includesvg[height=0.8\baselineskip]{\svgs/building_materials.svg} production by 2, and she also immediately gains the Mine's production value of 2 \includesvg[height=0.8\baselineskip]{\svgs/building_materials.svg} as she was the first player to Flag it.}\par
+    Flagging this particular Mine increases her Building Materials \svg{building_materials} production by 2, and she also immediately gains the Mine's production value of 2 \svg{building_materials} as she was the first player to Flag it.}\par
 \textit{Afterwards, Alice wants to go back to defend a previously Flagged Settlement by casting the Town Portal still left in her hand.
-    Her Hero is Level 2, so she can empower it with the Power Card's Expert Effect \includesvg[height=0.8\baselineskip]{\svgs/expert.svg}, which grants her an additional Movement Point after casting it.
+    Her Hero is Level 2, so she can empower it with the Power Card's Expert Effect \svgeven{expert}, which grants her an additional Movement Point after casting it.
 }
 
 \includegraphics[width=\linewidth]{\examples/sandro_empowering_town_portal.png}
 
 \vfill
 \hspace{2em}
-\includegraphics[width=\linewidth]{\art/resurrection.png}
+{\transparent{0.3}\includegraphics[width=\linewidth]{\art/resurrection.png}}
 \end{multicols*}

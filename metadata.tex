@@ -6,7 +6,7 @@
   left=2cm,
   right=2cm,
   marginparwidth=1.75cm,
-  footskip=2.05cm
+  footskip=2.05cm,
 ]{geometry}
 
 % Useful packages
@@ -16,6 +16,7 @@
 \usepackage{caption}
 \usepackage[strict]{changepage}
 \usepackage{enumitem}
+\usepackage{etoolbox}
 \usepackage{float}
 \usepackage{fullwidth}
 \usepackage{graphicx, trimclip}
@@ -25,17 +26,23 @@
 \usepackage{multicol}
 \usepackage[super]{nth}
 \usepackage{outlines}
+\usepackage{paracol}
+\usepackage[section]{placeins}
 \usepackage{setspace}
 \usepackage{stfloats}
-\usepackage{subfigure}
+\usepackage{subcaption}
 \usepackage[usetransparent=false]{svg}
 \usepackage{tabularx}
 \usepackage[subfigure]{tocloft}
 \usepackage{tikz}
 \usepackage{titlesec}
+\usepackage{transparent}
+\usepackage{verbatim}
 \usepackage{varwidth}
 \usepackage{wrapfig}
 \usepackage[most]{tcolorbox}
+\usepackage{catchfile}
+\usepackage{xstring}
 \newtcolorbox{scaledfigure}[1][]{height fill, space to=\myspace,#1}
 \hypersetup{
   colorlinks=true,
@@ -49,15 +56,41 @@
 \usepackage[skip=6pt, indent=0pt]{parskip}
 \setstretch{1}
 
+% Get version from env
+% \getenv{variable_name} just prints the value
+% \getenv[\macro]{variable_name} stores the value in \macro for reusability
+\newcommand{\getenv}[2][]{%
+  \CatchFileEdef{\value}{"|echo \$#2"}{\endlinechar=-1}%
+  \if\relax\detokenize{#1}\relax\value\else\let#1\value\fi}
+
 % Add dots to the table of contents
 \renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
 \renewcommand\cftsecdotsep{\cftdot}
 \renewcommand\cftsubsecdotsep{\cftdot}
 
 \captionsetup[figure]{labelformat=empty}
-\usetikzlibrary{shadows, shadows.blur, calc}
+\captionsetup[subfigure]{labelformat=empty, singlelinecheck=off, justification=centering}
+\usetikzlibrary{shadows, shadows.blur, calc, backgrounds}
 
 \setlength{\columnsep}{1cm}
+\newtoggle{printable}
+\newtoggle{noartbackground}
+\newtoggle{githubbuild}
+
+% Control addition of certain pages in the printable version.
+% Useful to make the printable version have correct number of pages.
+\newtoggle{printable_quote_separate_page}
+\newtoggle{printable_notes_page}
+\togglefalse{printable_quote_separate_page}
+\toggletrue{printable_notes_page}
+
+\AtBeginDocument{
+  \iftoggle{printable}{}{
+    % If printable was disabled, automatically disable related flags.
+    \togglefalse{printable_quote_separate_page}
+    \togglefalse{printable_notes_page}
+  }
+}
 
 % Variables
 \def\_assets{assets}
@@ -75,19 +108,34 @@
 \def\tables{\_assets/tables}
 \def\qr{\_assets/qr-codes}
 
+\def\repourl{https://github.com/Heegu-sama/Homm3BG}
+\def\bggthreadurl{https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project}
+
+\renewcommand{\labelitemi}{\includegraphics[width=0.7em, valign=c]{\layout/listdot.png}}
+
 % Colors
 \definecolor{amber}{rgb}{1.0, 0.49, 0.0}
 \definecolor{antiquewhite}{rgb}{0.98, 0.92, 0.84}
-\definecolor{arylideyellow}{rgb}{0.91, 0.84, 0.42}
+\definecolor{arylideyellow}{rgb}{0.96, 0.89, 0.58}
 \definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
 \definecolor{darkcandyapplered}{rgb}{0.64, 0.0, 0.0}
 \definecolor{goldenbrown}{rgb}{0.6, 0.4, 0.08}
+
+\newcommand{\svg}[2][10]{%
+  {\raisebox{-0.15\height}{\includesvg[height=#1px]{\svgs/\detokenize{#2}.svg}}}%
+}%
+\newcommand{\svgunit}[2][10]{%
+  {\raisebox{-0.1\height}{\includesvg[height=#1px]{\svgs/\detokenize{#2}.svg}}}%
+}%
+\newcommand{\svgeven}[2][10]{%
+  \includesvg[height=#1px]{\svgs/\detokenize{#2}.svg}%
+}%
 
 % Command to frame images
 \newcommand\framedimage[2][]{%
   \begin{tikzpicture}
     \draw (0, 0) node[inner sep=0] {\makebox[#1][c]{\includegraphics[width=#1]{#2}}};
-    \draw [black, thick] ([xshift=+1pt, yshift=-1pt] current bounding box.north west) rectangle ([xshift=-1pt, yshift=1pt] current bounding box.south east);
+    \draw [bordermidyellow, thick] ([xshift=+1pt, yshift=-1pt] current bounding box.north west) rectangle ([xshift=-1pt, yshift=1pt] current bounding box.south east);
     \draw [borderoutyellow, thick] (current bounding box.north west) rectangle (current bounding box.south east);
     \draw [borderinyellow, thick] ([xshift=+3pt, yshift=-3pt] current bounding box.north west) rectangle ([xshift=-3pt, yshift=3pt] current bounding box.south east);
   \end{tikzpicture}}
@@ -106,27 +154,35 @@
     \color{antiquewhite} \section*{\MakeUppercase{#1}}
   }
 }
-\newcommand{\addsection}[2]{
+\newcommand{\addsection}[3][1]{
+  \def\oneliner{\equal{#1}{1}}
   \vspace*{-5em}
   \hspace*{-1em}
   \makebox[0pt][l]{
   \raisebox{-\totalheight}[0pt][7pt]{
     \begin{tikzpicture}
       \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth, height=0.2\linewidth]{\layout/section_heading.jpg}};
-      \draw (-6.2, 0) node {\includegraphics[width=0.125\textwidth]{#2}};
+      \draw (-6.2, 0) node {\includegraphics[width=0.125\textwidth]{#3}};
     \end{tikzpicture}
     }
   }
-  \begin{fullwidth}[leftmargin=0.16\textwidth]
+  \begin{fullwidth}[leftmargin=0.16\textwidth, outermargin=0.16\textwidth, innermargin=0.16\textwidth]
     \begin{center}
       \vspace*{\lang_header_adjustment}
-      \sectionheadertext{#1}
-      \cleardoublepage\phantomsection\addcontentsline{toc}{section}{\protect\numberline{}#1}
+      \ifthenelse{\oneliner}{}{\vspace{-13pt}}
+      \sectionheadertext{#2}
+      \cleardoublepage\phantomsection\addcontentsline{toc}{section}{\protect\numberline{}\mbox{#2}}
     \end{center}
   \end{fullwidth}
   \vspace{1.75em}
+  \ifthenelse{\oneliner}{}{\vspace{-13pt}}
 }
 %End of create section heading.
+
+% Apply language-specific subsection spacings if defined
+\ifdefined\subsectionspacing
+  \subsectionspacing{}
+\fi
 
 \newcommand\picdims[4][]{%
   \setbox0=\hbox{\includegraphics[#1]{#4}}%
@@ -141,16 +197,16 @@
   ultra thick/.style={line width=2.2pt}
 }
 
-\definecolor{borderoutyellow}{HTML}{E0B75F}
-\definecolor{borderinyellow}{HTML}{F6EA48}
+\definecolor{borderoutyellow}{HTML}{DBCA86}
+\definecolor{borderinyellow}{HTML}{B09E69}
+\definecolor{bordermidyellow}{HTML}{6f6749}
 % Create note box
 \providecommand{\notefont}[0]{\fontfamily{ptm}\selectfont}
 \newcommand{\note}[2]{
   \begin{tikzpicture}
-    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/note-big.jpg}}};
-    \draw [black, ultra thick] ([xshift=+2pt, yshift=-2pt] current bounding box.north west) rectangle ([xshift=-2pt, yshift=2pt] current bounding box.south east);
+    \textlang{english}{\draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/table-background.jpg}}};}
     \draw [borderoutyellow, very thick] (current bounding box.north west) rectangle (current bounding box.south east);
-    \draw [borderinyellow, thick] ([xshift=+4.5pt, yshift=-4.5pt] current bounding box.north west) rectangle ([xshift=-4.5pt, yshift=4.5pt] current bounding box.south east);
+    \draw [borderinyellow, thick] ([xshift=+2.8pt, yshift=-2.8pt] current bounding box.north west) rectangle ([xshift=-2.8pt, yshift=2.8pt] current bounding box.south east);
     \node at (current bounding box.center) {
       \begin{varwidth}{0.85\linewidth}
       \notefont{
@@ -161,13 +217,22 @@
       }
       \end{varwidth}
     };
+    \begin{pgfonlayer}{background}
+      \begin{scope}[blend mode=multiply]
+        \draw [shade, blur shadow={shadow opacity=15}] (current bounding box.north west) rectangle (current bounding box.south east);
+      \end{scope}
+    \end{pgfonlayer}
   \end{tikzpicture}
 }
 
-\newcommand{\hommtable}[2]{
+% Create Heroes-styled framed canvas for a table. Accepts three arguments:
+% 1) [Optional] Drop shadow description. Use [] as the first arg to delete it.
+% 2) Height specified in verses (lines of text)
+% 3) Table contents like title and tabularx environment
+\newcommand{\hommtable}[3][shade, blur shadow={shadow opacity=15}]{
   \begin{tikzpicture}
-    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/table-background.jpg}}};
-    \draw [black, thick] ([xshift=+1pt, yshift=-1pt] current bounding box.north west) rectangle ([xshift=-1pt, yshift=1pt] current bounding box.south east);
+    \textlang{english}{\draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#2\baselineskip}{\layout/table-background.jpg}}};}
+    \draw [bordermidyellow, thick] ([xshift=+1pt, yshift=-1pt] current bounding box.north west) rectangle ([xshift=-1pt, yshift=1pt] current bounding box.south east);
     \draw [borderoutyellow, thick] (current bounding box.north west) rectangle (current bounding box.south east);
     \draw [borderinyellow, thick] ([xshift=+3pt, yshift=-3pt] current bounding box.north west) rectangle ([xshift=-3pt, yshift=3pt] current bounding box.south east);
     \node at (current bounding box.center) {
@@ -177,33 +242,47 @@
         \color{arylideyellow}
         \hypersetup{linkcolor=amber}
         \setlength{\tabcolsep}{0.3em}
-        #2
+        #3
         \egroup
       }
       \end{varwidth}
     };
+    \begin{pgfonlayer}{background}
+      \begin{scope}[blend mode=multiply]
+        \draw [#1] (current bounding box.north west) rectangle (current bounding box.south east);
+      \end{scope}
+    \end{pgfonlayer}
   \end{tikzpicture}
 }
+% End of Heroes-styled canvas definition.
 
 \definecolor{darkcellborder}{HTML}{634831}
+\definecolor{darkcellbg}{HTML}{20160C}
+
 \newcommand{\darkcell}[2][0.9]{
   \begin{tikzpicture}
-    \filldraw[line width=1.0pt, fill=black, fill opacity=0.5, draw=darkcellborder] (0, 0) rectangle (\linewidth, #1);
+    \filldraw[line width=1.0pt, fill=darkcellbg, fill opacity=0.5, draw=darkcellborder] (0, 0) rectangle (\linewidth, #1);
     \node[text width=\linewidth, align=center] at (current bounding box.center) {\textbf{#2}};
   \end{tikzpicture}
 }
 
 \definecolor{lightcellborder}{HTML}{77543e}
+\definecolor{lightcellbg}{HTML}{20160C}
+
 \newcommand{\lightcell}[2][0.9]{
   \begin{tikzpicture}
-    \filldraw[line width=1.0pt, fill=black, fill opacity=0.2, draw=lightcellborder] (0, 0) rectangle (\linewidth, #1);
+    \filldraw[line width=1.0pt, fill=lightcellbg, fill opacity=0.25, draw=lightcellborder] (0, 0) rectangle (\linewidth, #1);
     \node[text width=\linewidth, align=center] at (current bounding box.center) {\color{white}#2};
   \end{tikzpicture}
 }
 
 % Commands to be used for automation generating printable version
 \newcommand{\pagetarget}[2]{\label{#1}\hypertarget{#1}{#2}}
-\newcommand{\pagelink}[2]{\hyperlink{#1}{#2} (\pageshorthand \pageref{#1})}
+\newcommand{\pagelink}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{ \textmd{(\pageshorthand\,\pageref{#1})}}{}}
+
+% Stubs for polyglossia package used for Hebrew but not other languages
+\providecommand{\mainlanguagename}[0]{}
+\providecommand{\textlang}[2]{#2}
 
 % Command for overlay circled text
 \definecolor{goblin}{HTML}{3b7c33}
@@ -212,90 +291,47 @@
   \node (X) [draw=white, shape=circle, inner sep=0, fill=goblin, text=white, blur shadow={shadow blur steps=5}] {\strut \textbf{#1}};%
 }
 
+\newcommand{\drawbottom}{
+  \iftoggle{textright2left}{
+    \ifodd\value{page}
+      \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-even.png}}
+    \else
+      \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-odd.png}}
+  \fi}{%
+    \ifodd\value{page}
+      \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-odd.png}}
+    \else
+      \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-even.png}}
+  \fi}
+}
+
+\providetoggle{textright2left}
 % Background
 \AddToHook{shipout/background}{%
-  \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}%
-  \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}%
+  \iftoggle{noartbackground}{}{
+    \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}
+  }
+  \iftoggle{printable}{
+    \drawbottom
+  }{\put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}}
 }
 
 \makeindex[columns=3, title=,]
 
 \begin{document}
 
-\include{\sections/title_page.tex}
+\iftoggle{printable}{
+  \newgeometry{
+    twoside,
+    top=2cm,
+    bottom=3cm,
+    left=2.5cm,
+    right=1.5cm,
+    marginparwidth=1.75cm,
+    footskip=2.05cm,
+  }
+}{}
 
-\author{Hermanni ``Heegu'' Karppela}
-\maketitle
-
-\begin{center}
-  \version{}
-
-  \bigbreak
-
-  \intro{}
-\end{center}
-
-% QR codes placeholder
-
-\begin{tikzpicture}[remember picture, overlay]
-  \node(cover)[anchor=center, yshift=12em] at (current page.south) {
-    \includegraphics[width=1.01\paperwidth, keepaspectratio]{\art/castle_bottom.png}
-    \thispagestyle{empty}
-  };
-\end{tikzpicture}
-
-\clearpage
-
-\begin{multicols*}{2}
-\tableofcontents
-\vspace*{\fill}
-\columnbreak
-\vspace*{\fill}
-\includegraphics[width=\linewidth]{\art/black_dragon.jpg}
-\end{multicols*}
-
-\clearpage
-
-\include{\sections/introduction.tex}
-
-\include{\sections/game_modes.tex}
-
-\include{\sections/setup.tex}
-
-\include{\sections/round_structure.tex}
-
-\include{\sections/player_turns.tex}
-
-\include{\sections/heroes.tex}
-
-\include{\sections/deckbuilding.tex}
-
-\include{\sections/resources.tex}
-
-\include{\sections/town.tex}
-
-\include{\sections/map_elements.tex}
-
-\include{\sections/units.tex}
-
-\include{\sections/combat.tex}
-
-\include{\sections/ai_rules.tex}
-
-\include{\sections/difficulty.tex}
-
-\include{\sections/trading.tex}
-
-\include{\sections/scenario_end.tex}
-
-\include{\sections/expansion_content.tex}
-
-\include{\sections/all_map_locations.tex}
-
-% Notes placeholder
-
-\include{\sections/credits.tex}
-
-\include{\sections/back_cover.tex}
+\input{structure.tex}
 
 \end{document}

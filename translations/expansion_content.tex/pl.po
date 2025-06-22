@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-05-03 08:54+0100\n"
+"POT-Creation-Date: 2025-03-05 22:02+0000\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,36 +19,26 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
-#: sections/all_map_locations.tex:419 sections/combat.tex:5
-#: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
-#: sections/difficulty.tex:5 sections/expansion_content.tex:5
-#: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
-#: sections/map_elements.tex:118 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
-#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
+#: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
+#: sections/all_map_locations.tex:421 sections/combat.tex:7
+#: sections/credits.tex:10 sections/deckbuilding.tex:7
+#: sections/difficulty.tex:7 sections/expansion_content.tex:5
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
+#: sections/map_elements.tex:79 sections/map_elements.tex:124
+#: sections/player_turns.tex:7 sections/resources.tex:7
+#: sections/round_structure.tex:5 sections/scenario_end.tex:5
+#: sections/setup.tex:58 sections/town.tex:7 sections/trading.tex:7
+#: sections/units.tex:5 sections/units.tex:198
 #, no-wrap
 msgid ""
 "{2}\n"
 "\n"
 msgstr ""
 
-#. type: multicols*
-#: sections/ai_heroes.tex:30 sections/ai_heroes.tex:81 sections/combat.tex:95
-#: sections/combat.tex:233 sections/expansion_content.tex:65
-#: sections/heroes.tex:34
-#, no-wrap
-msgid ""
-"\\vfill\n"
-"\n"
-msgstr "\\empty\n"
-
 #. type: multicols
-#: sections/all_map_locations.tex:33 sections/all_map_locations.tex:61
-#: sections/all_map_locations.tex:150 sections/expansion_content.tex:103
-#: sections/units.tex:169 sections/units.tex:173
+#: sections/all_map_locations.tex:35 sections/all_map_locations.tex:63
+#: sections/all_map_locations.tex:152 sections/expansion_content.tex:56
+#: sections/trading.tex:24 sections/units.tex:206 sections/units.tex:210
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -56,27 +46,19 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/all_map_locations.tex:52 sections/all_map_locations.tex:424
-#: sections/credits.tex:33 sections/difficulty.tex:16
-#: sections/expansion_content.tex:18 sections/expansion_content.tex:63
-#: sections/game_modes.tex:27 sections/scenario_end.tex:23
-#: sections/units.tex:106
+#: sections/deckbuilding.tex:54 sections/deckbuilding.tex:72
+#: sections/deckbuilding.tex:122 sections/deckbuilding.tex:131
+#: sections/expansion_content.tex:61 sections/units.tex:66
+#: sections/units.tex:93
 #, no-wrap
-msgid ""
-"\\columnbreak\n"
-"\n"
+msgid "    \\begin{tikzpicture}\n"
 msgstr ""
 
-#. type: multicols
-#: sections/all_map_locations.tex:132 sections/credits.tex:35
-#: sections/credits.tex:39 sections/expansion_content.tex:57
-#: sections/game_modes.tex:25 sections/round_structure.tex:28
-#: sections/setup.tex:64 sections/town.tex:28 sections/town.tex:34
-#: sections/units.tex:104
+#. type: figure
+#: sections/deckbuilding.tex:107 sections/expansion_content.tex:94
+#: sections/map_elements.tex:40 sections/setup.tex:9
 #, no-wrap
-msgid ""
-"\\vspace*{\\fill}\n"
-"\n"
+msgid "  \\begin{tikzpicture}\n"
 msgstr ""
 
 #.  !TeX spellcheck = en_US
@@ -85,200 +67,105 @@ msgstr ""
 msgid "\\addsection{Expansion Content}{\\skills/pathfinding.png}"
 msgstr "\\addsection{Rozszerzenia}{\\skills/pathfinding.png}"
 
-#. type: multicols
-#: sections/expansion_content.tex:12
+#. type: multicols*
+#: sections/expansion_content.tex:10
 #, no-wrap
 msgid ""
-"\\subsection*{Schools of Magic}\n"
-"Most expansions have effects which refer to Schools of Magic\\index{Schools of Magic}.\n"
-"All Spell Cards belong to one School: either Air, Fire, Earth or Water.\n"
-"When casting the \\textbf{Magic Arrow Spell}, you must select which School it belongs to.\n"
-"\\textbf{Hero specialty cards are not Spells} even though some of them have a School of Magic.\n"
-"Spells with one School symbol on them are \\textbf{Basic Spells}, while Spells with four identical symbols are \\textbf{Expert Spells}. Certain game effects may affect only one of these types.\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
+"\\end{center}\n"
+"\\columnbreak\n"
 "\n"
 msgstr ""
-"\\subsection*{Szkoły Magii}\n"
-"Wiele rozszerzeń ma efekty, które odnoszą się do Szkół Magii\\index{Szkoły Magii}.\n"
-"Każda Karta Zaklęć należy do jednej ze Szkół: Powietrza, Ognia, Ziemi lub Wody.\n"
-"Podczas rzucania \\textbf{Zaklęcia ,,Magiczna Strzała''} wybierz Szkołę, do której należy.\n"
-"\\textbf{Karty Specjalności Bohatera} nie są Zaklęciami, mimo że niektóre należą do Szkoły Magii.\n"
-"Zaklęcia z jednym symbolem szkoły to \\textbf{Zaklęcia Podstawowe}, Zaklęcia z czterema identycznymi symbolami to \\textbf{Zaklęcia Mistrzowskie}. Niektóre efekty gry mogą wpływać tylko na jeden z tych typów.\n"
-"\n"
 
-#. type: multicols
-#: sections/expansion_content.tex:15
+#. type: multicols*
+#: sections/expansion_content.tex:13
 #, no-wrap
 msgid ""
 "\\subsection*{Permanent cards}\n"
-"Added by the stretch goals and Rampart expansions, explained in \\hyperlink{Playerdecks}{Player Decks}.\n"
+"Added by the stretch goals and Rampart expansions, explained in \\pagelink{Playerdecks}{Player Decks}.\n"
 "\n"
 msgstr ""
-"\\subsection*{Karty długotrwałe}\n"
-"Dodane przez Stretch Goals i rozszerzenie Bastion, zob. \\hyperlink{Playerdecks}{Talie Graczy}.\n"
-"\n"
-
-#. type: multicols
-#: sections/expansion_content.tex:45
-#, no-wrap
-msgid ""
-"\\begin{minipage}[t]{0.48\\textwidth}\n"
-"  \\centering\n"
-"  \\minipage[b]{0.5\\textwidth}\n"
-"    \\centering\n"
-"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_fire.png}\n"
-"    \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Fire}}}\n"
-"  \\endminipage\n"
-"  \\minipage[b]{0.5\\textwidth}\n"
-"    \\centering\n"
-"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_water.png}\n"
-"    \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Water}}}\n"
-"  \\endminipage\n"
-"  \\hfill\\allowbreak%\n"
-"  \\bigbreak\n"
-"  \\minipage[b]{0.5\\textwidth}\n"
-"    \\centering\n"
-"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_air.png}\n"
-"    \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Air}}}\n"
-"  \\endminipage\n"
-"  \\minipage[b]{0.5\\textwidth}\n"
-"    \\centering\n"
-"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_earth.png}\n"
-"    \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Earth}}}\n"
-"  \\endminipage\n"
-"  \\bigbreak\n"
-"\\end{minipage}\n"
-"\n"
-msgstr ""
-"\\begin{minipage}[t]{0.48\\textwidth}\n"
-"  \\centering\n"
-"  \\minipage[b]{0.5\\textwidth}\n"
-"    \\centering\n"
-"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_fire.png}\n"
-"    \\textit{\\textbf{\\textcolor{darkcandyapplered}{Szkoła Ognia}}}\n"
-"  \\endminipage\n"
-"  \\minipage[b]{0.5\\textwidth}\n"
-"    \\centering\n"
-"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_water.png}\n"
-"    \\textit{\\textbf{\\textcolor{darkcandyapplered}{Szkoła Wody}}}\n"
-"  \\endminipage\n"
-"  \\hfill\\allowbreak%\n"
-"  \\bigbreak\n"
-"  \\minipage[b]{0.5\\textwidth}\n"
-"    \\centering\n"
-"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_air.png}\n"
-"    \\textit{\\textbf{\\textcolor{darkcandyapplered}{Szkoła Powietrza}}}\n"
-"  \\endminipage\n"
-"  \\minipage[b]{0.5\\textwidth}\n"
-"    \\centering\n"
-"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_earth.png}\n"
-"    \\textit{\\textbf{\\textcolor{darkcandyapplered}{Szkoła Ziemi}}}\n"
-"  \\endminipage\n"
-"  \\bigbreak\n"
-"\\end{minipage}\n"
+"\\subsection*{Karty Długotrwałe}\n"
+"Dodane przez Stretch Goals i rozszerzenie Bastion, zob. \\pagelink{Playerdecks}{Talie Graczy}.\n"
 "\n"
 
 #. type: multicols*
-#: sections/expansion_content.tex:55
+#: sections/expansion_content.tex:19
 #, no-wrap
 msgid ""
-"\\subsection*{\\hypertarget{War Machines}{War Machines}}\n"
+"\\subsection*{\\pagetarget{War Machines}{War Machines}}\n"
 "Added by the Rampart expansion.\n"
-"War Machines\\index{War Machines} are permanent Cards that can be bought at either a \\hyperlink{Trading Post}{Trading Post} or a \\hyperlink{War Machine Factory}{War Machine Factory}.\n"
+"War Machines\\index{War Machines} are permanent Cards that can be bought at either a \\pagelink{Trading Post}{Trading Post} or a \\pagelink{War Machine Factory}{War Machine Factory}.\n"
 "If you buy one at the Trading Post, \\textbf{you cannot use} any of the other normal functions of that Field during that Visit.\n"
 "War machines are also more expensive at the Trading Post.\n"
 "\n"
 msgstr ""
-"\\subsection*{\\hypertarget{War Machines}{Machiny Wojenne}}\n"
+"\\subsection*{\\pagetarget{War Machines}{Machiny Wojenne}}\n"
 "Dodane w rozszerzeniu Bastion.\n"
-"Machiny Wojenne\\index{Machiny Wojenne} są Kartami z efektem Długotrwałym, można je zakupić w \\hyperlink{Punkt Handlowy}{Punkcie Handlowym} lub \\hyperlink{Fabryka Machin Wojennych}{Fabryce Machin Wojennych}.\n"
-"Jeśli kupisz jedną z nich w Punkcie Handlowym, \\textbf{nie będziesz mógł skorzystać} z żadnych innych normalnych funkcji tego Pola podczas tej Wizyty.\n"
+"Machiny Wojenne\\index{Machiny Wojenne} są Kartami z efektem Długotrwałym. Można je zakupić w \\hyperlink{Trading Post}{Punkcie Handlowym} lub \\pagelink{War Machine Factory}{Fabryce Machin Wojennych}.\n"
+"Jeśli kupisz Machinę w Punkcie Handlowym, \\textbf{nie będziesz mógł skorzystać} z żadnych innych funkcji tego Pola podczas tej Wizyty.\n"
 "\\textbf{Uwaga}: w Punkcie Handlowym Machiny Wojenne są droższe.\n"
 "\n"
 
 #. type: multicols*
-#: sections/expansion_content.tex:61
+#: sections/expansion_content.tex:42
 #, no-wrap
 msgid ""
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth]{\\art/land_mine.png}\n"
-"\\end{center}\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/expansion_content.tex:69 sections/expansion_content.tex:107
-#, no-wrap
-msgid ""
-"\\begin{minipage}[h]{\\linewidth}\n"
-"  \\vspace{0pt}\n"
+"{\n"
+"  \\bigskip\n"
 "  \\centering\n"
 "  \\begin{scriptsize}\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/expansion_content.tex:70 sections/expansion_content.tex:108
-#, no-wrap
-msgid "    \\begin{tikzpicture}\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/expansion_content.tex:89
-#, no-wrap
-msgid ""
-"      \\draw (0, 0) node[inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=0.8\\textwidth]{\\cards/war_machine.png}}};\n"
+"    \\begin{tikzpicture}\n"
+"      \\draw (0, 0) node[inner sep=0] {\\includegraphics[width=0.8\\linewidth]{\\cards/war_machine.png}};\n"
 "      \\draw (0.8, 3.6) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
 "      \\draw (0, -2.8) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
 "      \\draw (-1.2, -1.7) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
 "      \\draw (0.9, -1.7) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
 "    \\end{tikzpicture}\n"
 "  \\end{scriptsize}\n"
-"  \\break\n"
-"  \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{War Machine Card}}}}\n"
-"  \\scriptsize\n"
-"  \\begin{multicols}{2}\n"
-"    \\begin{itemize}\n"
-"      \\item[\\textbf{1.}] \\textbf{Name}\n"
-"      \\item[\\textbf{2.}] \\textbf{Effect}\n"
-"      \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
-"      \\item[\\textbf{3.}] \\textbf{War Machine Factory cost}\n"
-"      \\item[\\textbf{4.}] \\textbf{Trading Post cost}\n"
-"    \\end{itemize}\n"
-"  "
-msgstr ""
-"      \\draw (0, 0) node[inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=0.8\\textwidth]{translations/assets/pl/war_machine.png}}};\n"
-"      \\draw (0.8, 3.6) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
-"      \\draw (0, -2.8) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-"      \\draw (-1.2, -1.7) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
-"      \\draw (0.9, -1.7) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
-"    \\end{tikzpicture}\n"
-"  \\end{scriptsize}\n"
-"  \\break\n"
-"  \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Karta Machiny Wojennej}}}}\n"
-"  \\scriptsize\n"
-"  \\begin{multicols}{2}\n"
-"    \\begin{itemize}\n"
-"      \\item[\\textbf{1.}] \\textbf{Nazwa}\n"
-"      \\item[\\textbf{2.}] \\textbf{Efekt}\n"
-"      \\vspace*{\\fill}\n"
-"      \\columnbreak\n"
-"      \\item[\\textbf{3.}] \\textbf{\\mbox{Koszt w Fabryce} Machin \\mbox{Wojennych}}\n"
-"      \\item[\\textbf{4.}] \\textbf{Koszt w Punkcie Handlowym}\n"
-"    \\end{itemize}\n"
-"  "
-
-#. type: multicols*
-#: sections/expansion_content.tex:91 sections/expansion_content.tex:126
-#, no-wrap
-msgid ""
-"\\end{minipage}\n"
+"\n"
+"  \\footnotesize\n"
+"  \\textbf{\\textit{\\textcolor{darkcandyapplered}{War Machine Card}}}\n"
+"  \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt]\n"
+"    \\item[\\textbf{1.}] Name\n"
+"    \\item[\\textbf{2.}] Effect\n"
+"    \\item[\\textbf{3.}] Cost in a War Machine Factory\n"
+"    \\item[\\textbf{4.}] Cost in a Trading Post\n"
+"  \\end{itemize}\n"
+"}\n"
 "\n"
 msgstr ""
+"{\n"
+"  \\bigskip\n"
+"  \\centering\n"
+"  \\begin{scriptsize}\n"
+"    \\begin{tikzpicture}\n"
+"      \\draw (0, 0) node[inner sep=0] {\\includegraphics[width=0.8\\linewidth]{translations/assets/pl/war_machine.png}};\n"
+"      \\draw (0.8, 3.6) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
+"      \\draw (0, -2.8) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"      \\draw (-1.2, -1.7) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
+"      \\draw (0.9, -1.7) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
+"    \\end{tikzpicture}\n"
+"  \\end{scriptsize}\n"
+"\n"
+"  \\footnotesize\n"
+"  \\textbf{\\textit{\\textcolor{darkcandyapplered}{Karta Machiny Wojennej}}}\n"
+"  \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt]\n"
+"    \\item[\\textbf{1.}] Nazwa\n"
+"    \\item[\\textbf{2.}] Efekt\n"
+"    \\item[\\textbf{3.}] Koszt w Fabryce Machin Wojennych\n"
+"    \\item[\\textbf{4.}] Koszt w Punkcie Handlowym\n"
+"  \\end{itemize}\n"
+"}\n"
 
 #. type: multicols*
-#: sections/expansion_content.tex:101
+#: sections/expansion_content.tex:54
 #, no-wrap
 msgid ""
-"\\subsection*{Events}\n"
+"\\vspace*{\\fill}\n"
+"\\columnbreak\n"
+"\\subsection*{\\pagetarget{Events}{Events}}\n"
 "Added by the Fortress expansion.\n"
 "Event cards\\index{Event Cards} may be used in games with more than one player.\n"
 "Shuffle the Event Deck during setup.\n"
@@ -289,18 +176,30 @@ msgid ""
 "Any cards which were revealed as a part of resolving an Event should be shuffled back into their respective Decks afterwards.\n"
 "\n"
 msgstr ""
-"\\subsection*{Wydarzenia}\n"
-"Dodane przez rozszerzenie Cytadela.\n"
-"Karty Wydarzeń\\index{Karta Wydarzeń} mogą być używane w grach wieloosobowych.\n"
-"Talię Wydarzeń należy potasować podczas przygotowania do gry.\n"
-"Na początku każdej Rundy Zasobów (z wyjątkiem pierwszej) dobierz i przeczytaj kolejną Kartę Wydarzenia po otrzymaniu Zasobów.\n"
+"\\vspace*{\\fill}\n"
+"\\columnbreak\n"
+"\\subsection*{\\pagetarget{Events}{Wydarzenia}}\n"
+"Dodane w rozszerzeniu Cytadela.\n"
+"Karty Wydarzeń\\index{Karta!Wydarzeń} mogą być używane w grach wieloosobowych.\n"
+"Potasuj Talię Wydarzeń podczas przygotowania gry.\n"
+"Na początku każdej Rundy Zasobów (z wyjątkiem pierwszej), po otrzymaniu Zasobów, dobierz i przeczytaj kolejną Kartę Wydarzenia.\n"
 "Pierwsze Wydarzenie jest dobierane przez gracza rozpoczynającego. \\textbf{Należy zmieniać gracza, który dobiera kolejne Wydarzenie, zgodnie z ruchem wskazówek zegara}.\n"
-"Wszelkie efekty należy rozpatrywać w takiej samej kolejności, zaczynając od gracza, który dobrał Kartę.\n"
-"Wszelkie karty, które zostały ujawnione w ramach rozpatrywania Wydarzenia, należy wtasować z powrotem do ich talii.\n"
+"Rozpatruj wszelkie efekty w tej samej kolejności, zaczynając od gracza, który dobrał Kartę.\n"
+"Karty odkryte podczas rozpatrywania Wydarzenia należy wtasować z powrotem do ich Talii.\n"
 "\n"
 
 #. type: multicols*
-#: sections/expansion_content.tex:124
+#: sections/expansion_content.tex:60
+#, no-wrap
+msgid ""
+"\\begin{minipage}[h]{\\linewidth}\n"
+"  \\vspace{0.1pt}\n"
+"  \\centering\n"
+"  \\begin{scriptsize}\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/expansion_content.tex:77
 #, no-wrap
 msgid ""
 "      \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\cards/event.png}}};\n"
@@ -309,40 +208,49 @@ msgid ""
 "      \\draw (2.5, -1.1) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
 "    \\end{tikzpicture}\n"
 "  \\end{scriptsize}\n"
-"  \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Event Card}}}}\n"
-"  \\scriptsize\n"
+"  \\footnotesize\n"
+"  \\textbf{\\textit{\\textcolor{darkcandyapplered}{Event Card}}}\n"
 "  \\begin{multicols}{2}\n"
 "    \\begin{itemize}\n"
-"      \\item[\\textbf{1.}] \\textbf{Name}\n"
-"      \\item[\\textbf{2.}] \\textbf{Fluff}\n"
-"      \\item[\\textbf{3.}] \\textbf{Effect}\n"
+"      \\item[\\textbf{1.}] Name\n"
+"      \\item[\\textbf{2.}] Fluff\n"
+"      \\item[\\textbf{3.}] Effect\n"
 "      \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
 "    \\end{itemize}\n"
 "  "
 msgstr ""
-"      \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{translations/assets/pl/event.png}}};\n"
+"      \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\cards/event.png}}};\n"
 "      \\draw (1, 1.8) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
 "      \\draw (-2, 0.4) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
 "      \\draw (2.5, -1.1) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
 "    \\end{tikzpicture}\n"
 "  \\end{scriptsize}\n"
-"  \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Karta Wydarzeń}}}}\n"
-"  \\scriptsize\n"
+"  \\footnotesize\n"
+"  \\textbf{\\textit{\\textcolor{darkcandyapplered}{Karta Wydarzeń}}}\n"
 "  \\begin{multicols}{2}\n"
 "    \\begin{itemize}\n"
-"      \\item[\\textbf{1.}] \\textbf{Nazwa}\n"
-"      \\item[\\textbf{2.}] \\textbf{Fabuła}\n"
-"      \\item[\\textbf{3.}] \\textbf{Efekt}\n"
+"      \\item[\\textbf{1.}] Nazwa\n"
+"      \\item[\\textbf{2.}] Tekst fabularny\n"
+"      \\item[\\textbf{3.}] Efekt\n"
 "      \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
 "    \\end{itemize}\n"
 "  "
 
 #. type: multicols*
-#: sections/expansion_content.tex:133
+#: sections/expansion_content.tex:79
+#, no-wrap
+msgid ""
+"\\end{minipage}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/expansion_content.tex:87
 #, no-wrap
 msgid ""
 "\\subsection*{Summoning}\n"
 "Some cards from the Inferno expansion may Summon Units\\index{Summoning} during Combat.\n"
+"This effect cannot Summon Units from the Neutral Units Deck.\n"
 "Place the summoned Unit adjacent to the summoning Unit.\n"
 "Summoned Units Activate in the Round they were summoned if their Initiative is lower or equal to the Initiative of the currently Activated Unit.\n"
 "Otherwise, treat them as if they already activated this Combat Round.\n"
@@ -351,6 +259,7 @@ msgid ""
 msgstr ""
 "\\subsection*{Przyzwanie}\n"
 "Niektóre Karty z rozszerzenia Inferno mogą Przyzwać\\index{Przyzwanie} Jednostki podczas Walki.\n"
+"Tym efektem nie można Przyzywać Jednostek z Talii Jednostek Neutralnych.\n"
 "Przyzwaną Jednostkę należy umieścić obok Jednostki, która Przyzwała.\n"
 "Przyzwane Jednostki Aktywują się w Rundzie, w której je przyzwano, jeśli ich Inicjatywa jest niższa lub równa Inicjatywie aktualnie Aktywowanej Jednostki.\n"
 "W przeciwnym razie traktuj je tak, jakby już aktywowały się w tej Rundzie Walki.\n"
@@ -358,36 +267,29 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/expansion_content.tex:138
+#: sections/expansion_content.tex:92
 #, no-wrap
 msgid ""
-"\\subsection*{Empowered Statistic Cards}\\index{Empowered Statistic Card}\n"
+"\\subsection*{\\pagetarget{Empowered Statistic}{Empowered} Statistic Cards}\\index{Empowered Statistic Card}\n"
 "Added by the Inferno expansion.\n"
 "These cards are more powerful versions of the normal Statistics cards.\n"
-"They have only one effect which is identical to the normal Statistic's Expert Effect, but does not require using your \\includesvg[height=10px]{\\svgs/expert.svg}.\n"
+"They have only one effect which is identical to the normal Statistic's Expert Effect, but does not require using your \\svgeven{expert}.\n"
 "\n"
 msgstr ""
-"\\subsection*{Karty Ulepszonych Statystyk}\\index{Karta Ulepszonych Statystyk}\n"
+"\\subsection*{\\pagetarget{Empowered Statistic}{Karty Ulepszonych Statystyk}}\\index{Karta!Ulepszonych Statystyk}\n"
 "Dodane przez rozszerzenie Inferno.\n"
 "Karty te są silniejszymi wersjami zwykłych Kart Statystyk.\n"
-"Posiadają tylko jeden efekt, który jest identyczny z Efektem Mistrzowskim zwykłej Statystyki, ale nie wymaga użycia \\includesvg[height=10px]{\\svgs/expert.svg}.\n"
+"Posiadają tylko jeden efekt, który jest identyczny z Efektem Mistrzowskim zwykłej Statystyki, ale nie wymaga użycia \\svgeven{expert}.\n"
 "\n"
 
 #. type: multicols*
-#: sections/expansion_content.tex:139
+#: sections/expansion_content.tex:93
 #, no-wrap
 msgid "\\begin{scriptsize}\n"
 msgstr ""
 
-#. type: figure
-#: sections/expansion_content.tex:140 sections/map_elements.tex:38
-#: sections/setup.tex:70
-#, no-wrap
-msgid "  \\begin{tikzpicture}\n"
-msgstr ""
-
 #. type: multicols*
-#: sections/expansion_content.tex:166
+#: sections/expansion_content.tex:119
 #, no-wrap
 msgid ""
 "    \\draw (-2, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/empowered_statistic.png}}};\n"
@@ -402,17 +304,16 @@ msgid ""
 "\\vspace{-2em}\n"
 "\\begin{multicols}{2}\n"
 "  \\centering\n"
-"  \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Empowered Statistic Card}}}}\n"
-"  \\scriptsize\n"
+"  \\footnotesize\n"
+"  \\textbf{\\textit{\\textcolor{darkcandyapplered}{Empowered Statistic Card}}}\n"
 "  \\begin{itemize}\n"
-"    \\item[\\textbf{1.}] \\textbf{Name}\n"
-"    \\item[\\textbf{2.}] \\textbf{Basic Effect}\n"
+"    \\item[\\textbf{1.}] Name\n"
+"    \\item[\\textbf{2.}] Basic Effect\n"
 "  \\end{itemize}\n"
 "  \\columnbreak\n"
-"  \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Statistic Card \\phantom{Empowered}}}}}\n"
-"  \\scriptsize\n"
+"  \\textbf{\\textit{\\textcolor{darkcandyapplered}{Statistic Card \\phantom{Empowered}}}}\n"
 "  \\begin{itemize}\n"
-"    \\item[\\textbf{3.}] \\textbf{Expert Effect}\n"
+"    \\item[\\textbf{3.}] Expert Effect\n"
 "    \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
 "  \\end{itemize}"
 msgstr ""
@@ -428,44 +329,38 @@ msgstr ""
 "\\vspace{-2em}\n"
 "\\begin{multicols}{2}\n"
 "  \\centering\n"
-"  \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Karta Ulepszonych Statystyk}}}}\n"
-"  \\scriptsize\n"
+"  \\footnotesize\n"
+"  \\textbf{\\textit{\\textcolor{darkcandyapplered}{Karta Ulepszonych Statystyk}}}\n"
 "  \\begin{itemize}\n"
-"    \\item[\\textbf{1.}] \\textbf{Nazwa}\n"
-"    \\item[\\textbf{2.}] \\textbf{Efekt\\\\Podstawowy}\n"
+"    \\item[\\textbf{1.}] Nazwa\n"
+"    \\item[\\textbf{2.}] Efekt\\\\Podstawowy\n"
 "  \\end{itemize}\n"
 "  \\columnbreak\n"
-"  \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Karta Statystyk \\phantom{Empowered}}}}}\n"
-"  \\scriptsize\n"
+"  \\textbf{\\textit{\\textcolor{darkcandyapplered}{Karta Statystyk \\phantom{Empowered}}}}\n"
 "  \\begin{itemize}\n"
-"    \\item[\\textbf{3.}] \\textbf{Efekt\\\\Mistrzowski}\n"
+"    \\item[\\textbf{3.}] Efekt\\\\Mistrzowski\n"
 "    \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
 "  \\end{itemize}"
 
 #. type: multicols*
-#: sections/expansion_content.tex:170
+#: sections/expansion_content.tex:123
 #, no-wrap
 msgid ""
 "\\subsection*{Random Town}\\index{Random Town}\n"
-"Added by the Inferno expansion. See it in \\hyperlink{Random Town}{All Map Locations}.\n"
+"Added by the Inferno expansion. See it in \\pagelink{Random Town}{All Map Locations}.\n"
 "\n"
 msgstr ""
 "\\subsection*{Losowe Miasto}\\index{Losowe Miasto}\n"
-"Dodane w rozszerzeniu Inferno. Zobacz \\hyperlink{Random Town}{Wszystkie Lokacje na Mapie}.\n"
+"Dodane w rozszerzeniu Inferno. Zobacz \\pagelink{Random Town}{Wszystkie Lokacje na Mapie}.\n"
 "\n"
 
 #. type: multicols*
-#: sections/expansion_content.tex:176
+#: sections/expansion_content.tex:129
 #, no-wrap
 msgid ""
 "\\vfill\n"
 "\\hspace{2em}\n"
-"\\includegraphics[width=1.2\\linewidth]{\\art/implosion.png}\n"
+"{\\transparent{0.3}\\includegraphics[width=1.2\\linewidth]{\\art/implosion.png}}\n"
 "\\vfill\n"
 "\n"
 msgstr ""
-"\\vfill\n"
-"\\hspace{2em}\n"
-"\\includegraphics[width=1.2\\linewidth]{\\art/implosion.png}\n"
-"\\vfill\n"
-"\n"

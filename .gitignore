@@ -12,8 +12,11 @@
 *.synctex(busy)
 *.synctex.gz
 *.toc
+**/.DS_Store
 .idea/
-.venv
-.vs
-sections/translated
-svg-inkscape/*
+.venv/
+.vs/
+cache
+sections/translated/
+svg-inkscape/
+screenshots/

@@ -1,0 +1,123 @@
+name: Build release version
+
+on:
+  workflow_dispatch:
+
+env:
+  ARTIFACT_RETENTION_DAYS: 1
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - language: en
+            language_name: English
+            luaengine: false
+          - language: pl
+            language_name: Polski
+            luaengine: false
+          - language: es
+            language_name: Espanol
+            luaengine: false
+          - language: fr
+            language_name: Francais
+            luaengine: false
+          - language: ru
+            language_name: Russkiy
+            luaengine: true
+          - language: ua
+            language_name: Ukrainska
+            luaengine: true
+          - language: de
+            language_name: Deutsch
+            luaengine: false
+          - language: cs
+            language_name: Cestina
+            luaengine: true
+          - language: he
+            language_name: Ivrit
+            luaengine: true
+
+    steps:
+      - name: Set up repository
+        uses: actions/checkout@v4
+
+      - name: Generate translations for ${{ matrix.language }}
+        if: ${{ matrix.language != 'en' }}
+        uses: qwrtln/po4a-action@v1
+        with:
+          version: "0.73"
+          config: "po4a.cfg"
+          args: "--no-update"
+
+      - name: Set version
+        run: echo "VERSION=$(cat .version | tr . _)" >> $GITHUB_ENV
+
+      - name: Create artifact name
+        id: artifact_name
+        run: |
+          ARTIFACT_NAME="Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}"
+          echo "ARTIFACT_NAME=${ARTIFACT_NAME}" >> "$GITHUB_OUTPUT"
+
+      - name: Compile rule book
+        uses: xu-cheng/latex-action@v3
+        with:
+          extra_system_packages: "inkscape"
+          latexmk_use_lualatex: ${{ matrix.luaengine }}
+          latexmk_shell_escape: true
+          root_file: main_${{ matrix.language }}.tex
+
+      - name: Optimize PDF
+        uses: qwrtln/optimize-pdf@v1
+        with:
+          file-name: main_${{ matrix.language }}.pdf
+          quality-level: prepress
+          output-file: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}.pdf"
+
+      - name: Prepare for printable
+        run: rm *.aux
+
+      - name: Compile printable rule book
+        uses: xu-cheng/latex-action@v3
+        with:
+          extra_system_packages: "inkscape"
+          pre_compile: export HOMM3_PRINTABLE=1 HOMM3_LANG=${{ matrix.language }}
+          latexmk_use_lualatex: ${{ matrix.luaengine }}
+          latexmk_shell_escape: true
+          root_file: main_${{ matrix.language }}.tex
+
+      - name: Optimize PDF
+        uses: qwrtln/optimize-pdf@v1
+        with:
+          file-name: main_${{ matrix.language }}.pdf
+          quality-level: prepress
+          output-file: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}_Printable.pdf"
+          convert-to-cmyk: true
+
+      - name: Prepare for economy printable
+        run: rm *.aux
+
+      - name: Compile economy printable rule book without art backgrounds
+        uses: xu-cheng/latex-action@v3
+        with:
+          extra_system_packages: "inkscape"
+          pre_compile: export HOMM3_PRINTABLE=1 HOMM3_NO_ART_BACKGROUND=1 HOMM3_LANG=${{ matrix.language }}
+          latexmk_use_lualatex: ${{ matrix.luaengine }}
+          latexmk_shell_escape: true
+          root_file: main_${{ matrix.language }}.tex
+
+      - name: Optimize PDF
+        uses: qwrtln/optimize-pdf@v1
+        with:
+          file-name: main_${{ matrix.language }}.pdf
+          quality-level: prepress
+          output-file: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}_Economy_Printable.pdf"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.artifact_name.outputs.artifact_name }}
+          path: "Heroes3*.pdf"
+          retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}

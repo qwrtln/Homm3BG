@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-05-06 07:36+0000\n"
+"POT-Creation-Date: 2025-05-30 21:27+0100\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -18,17 +18,26 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#. type: multicols
+#. type: Plain text
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/all_map_locations.tex:419 sections/combat.tex:5
-#: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
-#: sections/difficulty.tex:5 sections/expansion_content.tex:5
-#: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:77
-#: sections/map_elements.tex:122 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
-#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
+#: sections/combat.tex:5 sections/components.tex:5 sections/credits.tex:6
+#: sections/deckbuilding.tex:5 sections/difficulty.tex:5
+#: sections/map_elements.tex:5 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/trading.tex:5
+msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
+#: sections/combat.tex:7 sections/credits.tex:10 sections/deckbuilding.tex:7
+#: sections/difficulty.tex:7 sections/expansion_content.tex:5
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
+#: sections/map_elements.tex:79 sections/map_elements.tex:125
+#: sections/player_turns.tex:7 sections/resources.tex:7
+#: sections/round_structure.tex:5 sections/scenario_end.tex:5
+#: sections/setup.tex:58 sections/town.tex:7 sections/trading.tex:7
+#: sections/units.tex:5 sections/units.tex:198
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -36,8 +45,8 @@ msgid ""
 msgstr ""
 
 #. type: figure
-#: sections/expansion_content.tex:140 sections/map_elements.tex:38
-#: sections/setup.tex:70
+#: sections/deckbuilding.tex:107 sections/expansion_content.tex:94
+#: sections/map_elements.tex:40 sections/setup.tex:9
 #, no-wrap
 msgid "  \\begin{tikzpicture}\n"
 msgstr ""
@@ -49,11 +58,11 @@ msgid "\\addsection{Map Elements}{\\skills/logistics.png}"
 msgstr "\\addsection{Elementy Mapy}{\\skills/logistics.png}"
 
 #. type: multicols*
-#: sections/map_elements.tex:11
+#: sections/map_elements.tex:13
 #, no-wrap
 msgid ""
 "{2}\n"
-"Each Scenario is built using four types of Map Tiles.\n"
+"Each Scenario is built using four types of \\pagetarget{Map}{Map} Tiles.\n"
 "Players start on their Faction-Specific Starting (I) Tile.\n"
 "Other tiles may be placed and discovered as described on the next page.\n"
 "During the game's setup, all face-down tiles should be selected randomly from the pool of possible Tiles as described by the Scenario and shuffled, keeping them face-down.\\par\n"
@@ -62,42 +71,42 @@ msgid ""
 "\n"
 msgstr ""
 "{2}\n"
-"Mapy budowane są z czterech rodzajów Kafelków.\n"
+"\\pagetarget{Map}{Mapy} budowane są z czterech rodzajów Kafelków.\n"
 "Gracz zaczyna na dedykowanym dla Frakcji Kafelku Początkowym I.\n"
 "Inne Kafelki można umieszczać i odkrywać zgodnie z opisem na następnej stronie.\n"
 "Podczas Przygotowania gry Kafelki ułożone rewersem do góry wybierane są losowo z dostępnej puli, zgodnie z opisem w Scenariuszu. Następnie są tasowane i trzymane rewersem do góry.\n"
-"\\textbf{Cyfra rzymska} na każdym Kafelku opisuje \\textbf{trudność} Jednostek Neutralnych jakie możesz spotkać na danym Kafeku oraz liczbę nagród.Kafelki Początkowe I są najłatwiejsze, zaś Kafelki VI-VII są najtrudniejsze.\\par\n"
+"\\textbf{Cyfra rzymska} na każdym Kafelku opisuje \\textbf{trudność} Jednostek Neutralnych jakie możesz spotkać na danym Kafeku oraz liczbę nagród. Kafelki Początkowe I są najłatwiejsze, zaś Kafelki VI-VII są najtrudniejsze.\\par\n"
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:17
+#: sections/map_elements.tex:19
 #, no-wrap
 msgid ""
 "\\vfill\n"
 "\\begin{center}\n"
-"  \\includegraphics[width=0.7\\linewidth]{\\art/counterstrike.png}\n"
+"  \\transparent{0.3}\\includegraphics[width=0.6\\linewidth]{\\art/counterstrike.png}\n"
 "\\end{center}\n"
 "\\vfill\n"
 "\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:34
+#: sections/map_elements.tex:36
 #, no-wrap
 msgid ""
 "\\subsection*{Map Tile Anatomy\\index{Map Tile}}\n"
 "Each Map Tile is divided into 7 separate \\textbf{Fields} that your Heroes can \\textbf{Visit}.\n"
 "When your Hero moves to a Field, they must immediately Visit it, or\n"
-"first start a \\hyperlink{Combat}{Combat} against the enemies guarding it before Visiting.\n"
+"first start a \\pagelink{Combat}{Combat} against the enemies guarding it before Visiting.\n"
 "Empty Fields\\index{Empty Field} do nothing when Visited.\n"
 "Solid yellow lines on a Field's edge cannot be passed through.\n"
-"\\hyperlink{Difficulty}{Roman numerals} written on a Field indicate that the Field is guarded by Neutral enemies that must be fought to Visit it.\\par\n"
+"\\pagelink{Difficulty}{Roman numerals} written on a Field indicate that the Field is guarded by Neutral enemies that must be fought to Visit it.\\par\n"
 "\\columnbreak\n"
 "\\includegraphics[width=\\linewidth]{\\images/maptiles.png}\n"
 "\\begin{itemize}\n"
 "  \\footnotesize\n"
 "  \\item[\\textbf{1.}] Starting Map Tiles: I\n"
-"  \\item[\\textbf{2.}] Far Map Tiles: II-II\n"
+"  \\item[\\textbf{2.}] Far Map Tiles: II-III\n"
 "  \\item[\\textbf{3.}] Near Map Tiles: IV-V\n"
 "  \\item[\\textbf{4.}] Center Map Tiles: VI-VII\n"
 "\\end{itemize}\n"
@@ -106,10 +115,10 @@ msgstr ""
 "\\subsection*{Budowa Kafelka Mapy\\index{Kafelek Mapy}}\n"
 "Każdy Kafelek podzielony jest na 7 \\textbf{Pól}, które Bohaterowie mogą \\textbf{Odwiedzić}.\n"
 "Kiedy Bohater przemieszcza się na Pole, musi je natychmiast Odwiedzić albo\n"
-"rozpocząć \\hyperlink{Combat}{Walkę} z Wrogami broniącymi tego Pola, zanim zostanie Odwiedzone.\n"
+"rozpocząć \\pagelink{Combat}{Walkę} z Wrogami broniącymi tego Pola, zanim zostanie Odwiedzone.\n"
 "Puste Pola \\index{Puste Pola} nie mają żadnego efektu po Odwiedzeniu.\n"
 "Ciągła żółta linia wokół niektórych Pól nie może być przekroczona.\n"
-"\\hyperlink{Difficulty}{Cyfry rzymskie} oznaczają, że Pole strzeżone jest przez wrogie Jednostki Neutralne, z którymi trzeba Walczyć, by je Odwiedzić.\\par\n"
+"\\pagelink{Difficulty}{Cyfry rzymskie} oznaczają, że Pole strzeżone jest przez wrogie Jednostki Neutralne, z którymi trzeba Walczyć, by je Odwiedzić.\\par\n"
 "\\columnbreak\n"
 "\\includegraphics[width=\\linewidth]{\\images/maptiles.png}\n"
 "\\begin{itemize}\n"
@@ -122,7 +131,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:37
+#: sections/map_elements.tex:39
 #, no-wrap
 msgid ""
 "\\vfill\n"
@@ -131,7 +140,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:55
+#: sections/map_elements.tex:57
 #, no-wrap
 msgid ""
 "    \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=0.75\\linewidth]{\\images/fields.png}}};\n"
@@ -154,7 +163,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:66
+#: sections/map_elements.tex:68
 #, no-wrap
 msgid ""
 "\\begin{itemize}\n"
@@ -182,7 +191,7 @@ msgstr ""
 "  "
 
 #. type: multicols*
-#: sections/map_elements.tex:68
+#: sections/map_elements.tex:70
 #, no-wrap
 msgid ""
 "\\end{itemize}\n"
@@ -190,7 +199,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:73
+#: sections/map_elements.tex:75
 #, no-wrap
 msgid ""
 "\\note{3}{\n"
@@ -202,11 +211,11 @@ msgstr ""
 "}"
 
 #. type: multicols
-#: sections/map_elements.tex:92
+#: sections/map_elements.tex:94
 #, no-wrap
 msgid ""
-"\\subsection*{\\hypertarget{Categories}{Location Categories}}\n"
-"Visiting Fields provides Heroes with benefits, such as gaining Resources or Cards (see \\hyperlink{All Map Locations}{All Map Locations}).\n"
+"\\subsection*{\\pagetarget{Categories}{Location Categories}}\n"
+"Visiting Fields provides Heroes with benefits, such as gaining Resources or Cards (see \\pagelink{All Map Locations}{All Map Locations}).\n"
 "There are three categories of Fields:\n"
 "\\begin{itemize}\n"
 "  \\item \\textbf{Visitable} – Once you Visit this field, place a Black Cube on it.\n"
@@ -221,8 +230,8 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
-"\\subsection*{\\hypertarget{Categories}{Typy Lokacji}}\n"
-"Odwiedzanie Pól przynosi korzyści (zob. \\hyperlink{All Map Locations}{Lokacje na Mapie}).\n"
+"\\subsection*{\\pagetarget{Categories}{Typy Lokacji}}\n"
+"Odwiedzanie Pól przynosi korzyści (zob. \\pagelink{All Map Locations}{Lokacje na Mapie}).\n"
 "Są 3 kategorie Pól:\n"
 "\\begin{itemize}\n"
 "  \\item \\textbf{Jednorazowe} – Po Odwiedzeniu takiego Pola, oznacz je Czarną Kostką.\n"
@@ -238,18 +247,26 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:99
-#, no-wrap
+#: sections/map_elements.tex:101
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{\\pagetarget{Placing}{Placing and Discovering New Tiles}}\\index{Discovering Tiles}\n"
+#| "Heroes may spend 1 MP to either reveal an adjacent face-down Tile, or to place a Far (II–III) Map Tile from their own supply of Tiles.\n"
+#| "All face-down Tiles should be kept \\textbf{hidden from all players} until they are about to be placed or revealed.\n"
+#| "New tiles must be placed adjacent to the Hero who spends the MP, and connected to at least two other existing Tiles.\n"
+#| "New Tiles must also be positioned so that there is a valid path that eventually connects them with all other Tiles.\n"
+#| "You may always rotate Map Tiles when placing or revealing them.\n"
+#| "\n"
 msgid ""
-"\\subsection*{\\hypertarget{Placing}{Placing and Discovering New Tiles}}\\index{Discovering Tiles}\n"
-"Heroes may spend 1 MP to either reveal an adjacent face-down Tile, or to place a Far (II–III) Map Tile from their own supply of Tiles.\n"
+"\\subsection*{\\pagetarget{Placing}{Placing and Discovering New Tiles}}\\index{Discovering Tiles}\n"
+"Heroes may spend 1 MP to either reveal an adjacent face-down Tile, or to place a Far (II–III) Map Tile from their own supply of Tiles (scenario rules determine the Tiles in your own supply).\n"
 "All face-down Tiles should be kept \\textbf{hidden from all players} until they are about to be placed or revealed.\n"
 "New tiles must be placed adjacent to the Hero who spends the MP, and connected to at least two other existing Tiles.\n"
 "New Tiles must also be positioned so that there is a valid path that eventually connects them with all other Tiles.\n"
 "You may always rotate Map Tiles when placing or revealing them.\n"
 "\n"
 msgstr ""
-"\\subsection*{\\hypertarget{Placing}{Dodawanie i Odkrywanie\\\\Kafelków}}\\index{Odkrywanie Kafelków}\n"
+"\\subsection*{\\pagetarget{Placing}{Dodawanie i Odkrywanie\\\\Kafelków}}\\index{Odkrywanie Kafelków}\n"
 "Bohater może wykorzystać 1 PR, by odkryć zakryty Kafelek lub umieścić na planszy Kafelek Daleki (II–III) z własnej puli.\n"
 "Wszystkie zakryte Kafelki powinny być \\textbf{zakryte przed wszystkimi graczami} do momentu aż zostaną odkryte lub umieszczone.\n"
 "Nowe Kafelki muszą być umieszczone obok Bohatera, który wykorzystał 1 PR, i muszą być połączone z co najmniej dwoma innymi Kafelkami.\n"
@@ -258,7 +275,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:104
+#: sections/map_elements.tex:106
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -269,12 +286,12 @@ msgid ""
 msgstr ""
 "\\medskip\n"
 "\\note{6}{\n"
-"  Kiedy Odwiedzasz Pole Wielokrotne, \\textbf{musisz} umieścić na nim Czarną Kostkę, nawet gdy nie chcesz skorzystać z efektów Pola.\n"
+"  Kiedy Odwiedzasz Pole Jednorazowe, \\textbf{musisz} umieścić na nim Czarną Kostkę, nawet gdy nie chcesz skorzystać z efektów Pola.\n"
 "}\n"
 "\n"
 
 #. type: figure*
-#: sections/map_elements.tex:116
+#: sections/map_elements.tex:119
 #, no-wrap
 msgid ""
 "[!hb]\n"
@@ -297,24 +314,24 @@ msgstr ""
 "  \\end{tikzpicture}"
 
 #. type: subsection{#2}
-#: sections/map_elements.tex:120
+#: sections/map_elements.tex:123
 msgid "Example Turn"
 msgstr "Przykładowa Tura"
 
 #. type: multicols*
-#: sections/map_elements.tex:125
+#: sections/map_elements.tex:128
 #, no-wrap
 msgid ""
-"\\textit{Alice wants to capture an adjacent \\hyperlink{Mines}{Mine} by Flagging it with her Main Hero, Sandro the Necromancer.\n"
-"    She spends 1 MP to move onto the Mine, which begins \\hyperlink{Combat}{Combat} against Neutral Units, since the Field has a \\hyperlink{Difficulty}{Difficulty Rating} and has not been previously Flagged by any player.}\\par\n"
+"\\textit{Alice wants to capture an adjacent \\pagelink{Mines}{Mine} by Flagging it with her Main Hero, Sandro the Necromancer.\n"
+"    She spends 1 MP to move onto the Mine, which begins \\pagelink{Combat}{Combat} against Neutral Units, since the Field has a \\pagelink{Difficulty}{Difficulty Rating} and has not been previously Flagged by any player.}\\par\n"
 "\n"
 msgstr ""
-"\\textit{Alicja chce przejąć sąsiednią \\hyperlink{Mines}{Kopalnię}, Flagując ją swoim głównym Bohaterem Nekromantą Sandro.\n"
-"    Wydaje 1 PR by przemieścić się na Kopalnię, co rozpoczyna \\hyperlink{Combat}{Walkę} z Jednostkami Neutralnymi, ponieważ Pole ma \\hyperlink{Difficulty}{Poziom Trudności} i nie zostało wcześniej Oflagowane przez innego gracza.}\\par\n"
+"\\textit{Alicja chce przejąć sąsiednią \\pagelink{Mines}{Kopalnię}, Flagując ją swoim głównym Bohaterem Nekromantą Sandro.\n"
+"    Wydaje 1 PR by przemieścić się na Kopalnię, co rozpoczyna \\pagelink{Combat}{Walkę} z Jednostkami Neutralnymi, ponieważ Pole ma \\pagelink{Difficulty}{Poziom Trudności} i nie zostało wcześniej Oflagowane przez innego gracza.}\\par\n"
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:127
+#: sections/map_elements.tex:130
 #, no-wrap
 msgid ""
 "\\includegraphics[width=1.1\\linewidth]{\\examples/sandro_takes_mine.png}\n"
@@ -324,21 +341,21 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:131
+#: sections/map_elements.tex:134
 #, no-wrap
 msgid ""
-"\\textit{The Mine turns out to be guarded by Troglodytes, which have 3 HP \\includesvg[height=0.8\\baselineskip]{\\svgs/health_points.svg}.\n"
+"\\textit{The Mine turns out to be guarded by Troglodytes, which have 3 HP \\svg{health_points}.\n"
 "Alice's current hand consists of a Power Card, a Lightning Bolt, Haste, and a Town Portal.\n"
-"During the Combat, she casts the Lightning Bolt, and Empowers \\includesvg[height=0.8\\baselineskip]{\\svgs/empower.svg} it with Haste's alternative (bottom) effect, which makes the Lightning Bolt deal 3 damage \\includesvg[height=0.8\\baselineskip]{\\svgs/damage.svg}, killing the Troglodytes and winning the Combat.}\n"
+"During the Combat, she casts the Lightning Bolt, and Empowers \\svg{empower} it with Haste's alternative (bottom) effect, which makes the Lightning Bolt deal 3 damage \\svg{damage}, killing the Troglodytes and winning the Combat.}\n"
 "\n"
 msgstr ""
-"\\textit{Kopalnia jest strzeżona przez Troglodytów, którzy mają 3 Punkty Zdrowia (3 PZ) \\includesvg[height=0.8\\baselineskip]{\\svgs/health_points.svg}.\n"
+"\\textit{Kopalnia jest strzeżona przez Troglodytów, którzy mają 3 Punkty Zdrowia (3 PZ) \\svg{health_points}.\n"
 "Talia Kart na ręce Alicji składa się z Karty Mocy oraz Zaklęcia Piorun, Przyspieszenie i Magiczny Portal.\n"
-"Podczas Walki Alicja rzuca Piorun i wzmacnia go \\includesvg[height=0.8\\baselineskip]{\\svgs/empower.svg} alternatywnym (dolnym) efektem Przyspieszenia, który powoduje, że Piorun zadaje 3 obrażenia \\includesvg[height=0.8\\baselineskip]{\\svgs/damage.svg} i zabija Troglodytów, wygrywając Walkę.}\n"
+"Podczas Walki Alicja rzuca Piorun i wzmacnia go \\svg{empower} alternatywnym (dolnym) efektem Przyspieszenia, który powoduje, że Piorun zadaje 3 obrażenia \\svg{damage} i zabija Troglodytów, wygrywając Walkę.}\n"
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:133
+#: sections/map_elements.tex:136
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_lightning_bolt.png}\n"
@@ -348,7 +365,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:135
+#: sections/map_elements.tex:138
 #, no-wrap
 msgid ""
 "\\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell Card per Combat Round.}\\par\n"
@@ -357,25 +374,25 @@ msgstr "\\textit{Walka trwała jedną rundę. Alicja nie byłaby w stanie rzuci�
 
 # "\n"
 #. type: multicols*
-#: sections/map_elements.tex:142
+#: sections/map_elements.tex:145
 #, no-wrap
 msgid ""
 "\\textit{Alice now Flags the Mine by placing one of her Faction Cubes on it.\n"
-"    Flagging this particular Mine increases her Building Materials \\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg} production by 2, and she also immediately gains the Mine's production value of 2 \\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg} as she was the first player to Flag it.}\\par\n"
+"    Flagging this particular Mine increases her Building Materials \\svg{building_materials} production by 2, and she also immediately gains the Mine's production value of 2 \\svg{building_materials} as she was the first player to Flag it.}\\par\n"
 "\\textit{Afterwards, Alice wants to go back to defend a previously Flagged Settlement by casting the Town Portal still left in her hand.\n"
-"    Her Hero is Level 2, so she can empower it with the Power Card's Expert Effect \\includesvg[height=0.8\\baselineskip]{\\svgs/expert.svg}, which grants her an additional Movement Point after casting it.\n"
+"    Her Hero is Level 2, so she can empower it with the Power Card's Expert Effect \\svgeven{expert}, which grants her an additional Movement Point after casting it.\n"
 "}\n"
 "\n"
 msgstr ""
 "\\textit{Alicja Flaguje Kopalnię, umieszczając na niej swoją Kostkę Frakcji.\n"
-"    Oflagowanie Kopalni zwiększa produkcję Budulca \\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg} o 2, natychmiast dając też wartość produkcji Kopalni wynoszącą 2 \\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg}, ponieważ była pierwszym graczem, który Oflagował Kopalnię.}\\par\n"
+"    Oflagowanie Kopalni zwiększa produkcję Budulca \\svg{building_materials} o 2, natychmiast dając też wartość produkcji Kopalni wynoszącą 2 \\svg{building_materials}, ponieważ była pierwszym graczem, który Oflagował Kopalnię.}\\par\n"
 "\\textit{Następnie Alicja chce wrócić do wcześniej Oflagowanej Osady. Rzuca Magiczny Portal, który wciąż ma na ręce.\n"
-"    Jej Bohater jest na 2 poziomie, więc może wzmocnić go za pomocą Efektu Mistrzowskiego \\includesvg[height=0.8\\baselineskip]{\\svgs/expert.svg} Karty Mocy, który po rzuceniu daje jej dodatkowy PR.\n"
+"    Jej Bohater jest na 2 poziomie, więc może wzmocnić go za pomocą Efektu Mistrzowskiego \\svgeven{expert} Karty Mocy, który po rzuceniu daje jej dodatkowy PR.\n"
 "}\n"
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:144
+#: sections/map_elements.tex:147
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_town_portal.png}\n"
@@ -385,10 +402,10 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:148
+#: sections/map_elements.tex:151
 #, no-wrap
 msgid ""
 "\\vfill\n"
 "\\hspace{2em}\n"
-"\\includegraphics[width=\\linewidth]{\\art/resurrection.png}"
+"{\\transparent{0.3}\\includegraphics[width=\\linewidth]{\\art/resurrection.png}}"
 msgstr ""

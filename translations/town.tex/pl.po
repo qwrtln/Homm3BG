@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-06 18:37+0300\n"
+"POT-Creation-Date: 2025-03-05 22:02+0000\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -18,17 +18,27 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
+#. type: Plain text
+#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
+#: sections/combat.tex:5 sections/components.tex:5 sections/credits.tex:6
+#: sections/deckbuilding.tex:5 sections/difficulty.tex:5
+#: sections/map_elements.tex:5 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/trading.tex:5
+msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
+msgstr ""
+
 #. type: multicols
-#: sections/all_map_locations.tex:5 sections/all_map_locations.tex:411
-#: sections/credits.tex:7 sections/deckbuilding.tex:5
-#: sections/expansion_content.tex:5 sections/expansion_content.tex:49
+#: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
+#: sections/all_map_locations.tex:421 sections/combat.tex:7
+#: sections/credits.tex:10 sections/deckbuilding.tex:7
+#: sections/difficulty.tex:7 sections/expansion_content.tex:5
 #: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
-#: sections/map_elements.tex:34 sections/map_elements.tex:74
-#: sections/other_rules.tex:4 sections/other_rules.tex:33
-#: sections/player_turns.tex:5 sections/resources.tex:5
+#: sections/map_elements.tex:79 sections/map_elements.tex:124
+#: sections/player_turns.tex:7 sections/resources.tex:7
 #: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:5 sections/town.tex:5 sections/units.tex:5
-#: sections/units.tex:119
+#: sections/setup.tex:58 sections/town.tex:7 sections/trading.tex:7
+#: sections/units.tex:5 sections/units.tex:198
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -36,12 +46,10 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/all_map_locations.tex:115 sections/all_map_locations.tex:124
-#: sections/credits.tex:20 sections/credits.tex:24 sections/deckbuilding.tex:57
-#: sections/deckbuilding.tex:149 sections/expansion_content.tex:57
-#: sections/game_modes.tex:25 sections/round_structure.tex:28
-#: sections/setup.tex:64 sections/town.tex:28 sections/town.tex:34
-#: sections/units.tex:77
+#: sections/all_map_locations.tex:134 sections/credits.tex:38
+#: sections/credits.tex:42 sections/round_structure.tex:28
+#: sections/round_structure.tex:33 sections/setup.tex:117 sections/town.tex:30
+#: sections/town.tex:36 sections/units.tex:134
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -55,21 +63,21 @@ msgid "\\addsection{Town}{\\skills/artillery.png}"
 msgstr "\\addsection{Miasto}{\\skills/artillery.png}"
 
 #. type: multicols*
-#: sections/town.tex:26
+#: sections/town.tex:28
 #, no-wrap
 msgid ""
-"\\hypertarget{Town}{Each}\\index{Town} Faction has their own Town, located in the center of their Starting Tile.\n"
-"The Town is your most important location, as many Scenarios \\hyperlink{End}{may end} if it's \\hyperlink{Categories}{Flagged} by an enemy Hero.\\par\n"
+"\\pagetarget{Town}{Each}\\index{Town} Faction has their own Town, located in the center of their Starting Tile.\n"
+"The Town is your most important location, as many Scenarios \\pagelink{End}{may end} if it's \\pagelink{Categories}{Flagged} by an enemy Hero.\\par\n"
 "The contents of your Town and overall Faction status are represented by the Town Board.\n"
 "It shows your currently built Buildings, Resource costs for future Buildings, your Resource incomes, and status of Town Action Tokens.\\par\n"
 "All Factions are able to Build the following Buildings\\index{Buildings} in their Town:\n"
 "\\begin{itemize}\n"
 "  \\item \\textbf{City Hall} – Provides Resource income or a Faction-Specific Ability.\n"
 "  \\item \\textbf{Citadel} – Allows you to Reinforce Units when using the Population Token.\n"
-"Also \\hyperlink{Walls}{protects your Town} when it is attacked.\n"
+"Also \\pagelink{Walls}{protects your Town} when it is attacked.\n"
 "  \\item \\textbf{Unit Dwellings} – Allows you to Recruit Units.\n"
-"Dwellings have three Levels that unlock new Units, which must be Built in the following order:\\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/Golden.svg}\n"
-"  \\item \\textbf{Mage Guild}\\index{Mage Guild} - gains you \\hyperlink{spells}{Spells}.\n"
+"Dwellings have three Levels that unlock new Units, which must be Built in the following order: \\svgunit{bronze}\\svgunit{silver}\\svgunit{golden}\n"
+"  \\item \\textbf{Mage Guild}\\index{Mage Guild} - gains you \\pagelink{spells}{Spells}.\n"
 "  \\item \\textbf{Faction Building} - a Faction-Specific Building with a unique effect.\n"
 "\\end{itemize}\n"
 "\\textbf{One Building} may be Built each Round by using the Build Token\\index{Build Token}.\n"
@@ -80,33 +88,33 @@ msgid ""
 "Some Building Tiles are double-sided, and may later be upgraded and flipped to represent two different buildings at the same time. Such upgrades must be \\textbf{Built in order}.\\par\n"
 "\n"
 msgstr ""
-"\\hypertarget{Town}{Każda} Frakcja ma własne Miasto\\index{Miasto}, które znajduje się na środku swojego Kafelka Początkowego.\n"
-"Miasto jest twoją najważniejszą Lokacją – wiele Scenariuszy może się \\hyperlink{End}{zakończyć}, jeśli \\hyperlink{Categories}{Oflaguje} je Bohater wroga.\\par\n"
+"\\pagetarget{Town}{Każda} Frakcja ma własne Miasto\\index{Miasto}, które znajduje się na środku swojego Kafelka Początkowego.\n"
+"Miasto jest twoją najważniejszą Lokacją – wiele Scenariuszy może się \\pagelink{End}{zakończyć}, jeśli \\pagelink{Categories}{Oflaguje} je Bohater wroga.\\par\n"
 "Stan twojego Miasta i Frakcji są ukazane na Planszy Miasta.\n"
 "Pokazane są na niej wybudowane Budynki, Koszt budowy dostępnych Budynków, przychód Zasobów i stan Żetonów Akcji Miasta.\\par\n"
 "Każda Frakcja może wybudować następujące Budynki\\index{Budynki} w swoim Mieście:\n"
 "\\begin{itemize}\n"
 "  \\item \\textbf{Ratusz} – W rundzie Zasobów, zyskujesz przychód lub korzystasz z unikatowej zdolności swojej Frakcji.\n"
 "  \\item \\textbf{Cytadela} – Pozwala Wzmacniać jednostki za pomocą Żetonu Populacji.\n"
-"Ponadto \\hyperlink{Walls}{chroni twoje Miasto} podczas oblężenia.\n"
+"Ponadto \\pagelink{Walls}{chroni twoje Miasto} podczas oblężenia.\n"
 "  \\item \\textbf{Siedliska Jednostek} – Pozwalają Rekrutować Jednostki.\n"
-"Siedliska umożliwiają Rekrutowanie Jednostek, wznosić je można tylko w kolejności:\\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/Golden.svg}\n"
-"  \\item \\textbf{Gildia Magów}\\index{Gildia Magów} – zapewnia dostęp do \\hyperlink{spells}{Zaklęć}.\n"
+"Siedliska umożliwiają Rekrutowanie Jednostek, wznosić je można tylko w kolejności:\\svgunit{bronze}\\svgunit{silver}\\svgunit{golden}\n"
+"  \\item \\textbf{Gildia Magów}\\index{Gildia Magów} – zapewnia dostęp do \\pagelink{spells}{Zaklęć}.\n"
 "  \\item \\textbf{Budynek Frakcyjny} – zapewnia efekt zależny od wybranej Frakcji.\n"
 "\\end{itemize}\n"
-"Możesz wybudować tylko \\textbf{jeden Budynek} w ciągu Rundy za pomocą Żetonu Budowy\\index{Żeton Budowy}.\n"
+"Możesz wybudować tylko \\textbf{jeden Budynek} w ciągu Rundy za pomocą Żetonu Budowy\\index{Żeton!Budowy}.\n"
 "Aby wybudować Budynek, opłać podany koszt, odwróć Żeton Budowy na nieaktywną stronę i umieść Kafelek Budynku w odpowiednim miejscu na Planszy Miasta.\n"
 "Jeśli Budynek oferuje natychmiastowe efekty po wybudowaniu, rozpatrz je teraz.\\par\n"
 "Wybudowane Budynki mają odpowiadającą im okrągłą ikonę.\n"
 "Budynki, które można wybudować później, mają ikonę prostokąta, która zawiera Koszty budowy w Zasobach.\n"
-"Niektóre Kafelki Budynków są dwustronne: mogą zostać ulepszone, a następnie odwrócone, by przedstawiać dwa budynki jednocześnie. Ulepszać należy \\textbf{w odpowiedniej kolejności}.\n"
+"Niektóre Kafelki Budynków są dwustronne: mogą zostać ulepszone, a następnie odwrócone, by przedstawiać dwa budynki jednocześnie. Ulepszenia należy \\textbf{budować w odpowiedniej kolejności}.\n"
 
 #. type: multicols*
-#: sections/town.tex:32
+#: sections/town.tex:34
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth]{\\art/earthquake.png}\n"
+"  \\transparent{0.3}\\includegraphics[width=\\linewidth]{\\art/earthquake.png}\n"
 "\\end{center}\n"
 "\n"
 msgstr ""

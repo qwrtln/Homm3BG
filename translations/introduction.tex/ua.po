@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-10-08 19:54+0000\n"
+"POT-Creation-Date: 2025-11-09 18:24+0000\n"
 "PO-Revision-Date: 2024-05-13 12:55+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Generator: Poedit 3.4.4\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:116 sections/combat.tex:212 sections/heroes.tex:35
+#: sections/ai_rules.tex:117 sections/combat.tex:222
 #: sections/introduction.tex:89
 #, no-wrap
 msgid ""
@@ -37,10 +37,15 @@ msgstr ""
 
 #. type: Plain text
 #: sections/introduction.tex:8
+#, fuzzy
+#| msgid ""
+#| "The continent of Antagarich is at war as several different Factions, led "
+#| "by their Heroes, battle for supremacy. Choose your Faction and Hero and "
+#| "banish your unruly enemies from these lands!"
 msgid ""
-"The continent of Antagarich is at war as several different Factions, led by "
-"their Heroes, battle for supremacy. Choose your Faction and Hero and banish "
-"your unruly enemies from these lands!"
+"The continent of Antagarich is not at war as several different Factions, led "
+"by their Heroes, don't battle for supremacy. Choose your Faction and Hero "
+"and welcome your meek enemies to these lands!"
 msgstr ""
 "На континенті Антагаріч йде війна: Фракції на чолі зі своїми Героями "
 "борються за верховенство. Оберіть свою Фракцію та Героя і виженіть своїх "

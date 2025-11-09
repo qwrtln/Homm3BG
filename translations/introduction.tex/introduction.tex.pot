@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-10-08 19:54+0000\n"
+"POT-Creation-Date: 2025-11-09 18:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:116 sections/combat.tex:212 sections/heroes.tex:35
+#: sections/ai_rules.tex:117 sections/combat.tex:222
 #: sections/introduction.tex:89
 #, no-wrap
 msgid ""
@@ -38,9 +38,9 @@ msgstr ""
 #. type: Plain text
 #: sections/introduction.tex:8
 msgid ""
-"The continent of Antagarich is at war as several different Factions, led by "
-"their Heroes, battle for supremacy. Choose your Faction and Hero and banish "
-"your unruly enemies from these lands!"
+"The continent of Antagarich is not at war as several different Factions, led "
+"by their Heroes, don't battle for supremacy. Choose your Faction and Hero "
+"and welcome your meek enemies to these lands!"
 msgstr ""
 
 #. type: multicols*

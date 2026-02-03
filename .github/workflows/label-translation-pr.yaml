@@ -1,0 +1,50 @@
+name: Label translation PR
+
+on:
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  tablint:
+    runs-on: ubuntu-latest
+    name: Label PR
+
+    steps:
+      - name: Set up repository
+        uses: actions/checkout@v4
+
+      - name: Label
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cat << 'EOF' > matrix.json
+          {
+            "include": [
+              { "prefix": "[PL]", "label": "🇵🇱 Polish"},
+              { "prefix": "[ES]", "label": "🇪🇸 Spanish"},
+              { "prefix": "[FR]", "label": "🇫🇷 Frnch"},
+              { "prefix": "[RU]", "label": "🇷🇺 Russian"},
+              { "prefix": "[UA]", "label": "🇺🇦 Ukrainian"},
+              { "prefix": "[DE]", "label": "🇩🇪 German"},
+              { "prefix": "[CS]", "label": "🇨🇿 Czech"},
+              { "prefix": "[HE]", "label": "🇮🇱 Hebrew"}
+            ]
+          }
+          EOF
+          jq -c '.[]' matrix.json | while read i; do
+            prefix=$(jq --raw-output '.prefix' <<< "$item")
+            echo "Does $PR_TITLE start with $prefix?"
+            if [[ $PR_TITLE == $prefix* ]]; then
+              label=$(jq --raw-output '.label' <<< "$item")
+              echo "Adding label: $label"
+              gh pr edit ${{ github.event.pull_request.number }} --add-label "${label}"
+              exit 0
+            else
+              echo "Of course not!"
+            fi
+            echo "Title didn't match."
+          done

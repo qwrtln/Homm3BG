@@ -2,7 +2,7 @@ name: Check trailing whitespace
 
 on:
   pull_request:
-    branches: [main]
+    branches: [żółć]
 
 jobs:
   trailing_whitespace:

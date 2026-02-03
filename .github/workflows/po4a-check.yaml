@@ -2,7 +2,7 @@ name: Check for unupdated translations
 
 on:
   pull_request:
-    branches: [main]
+    branches: [żółć]
 
 jobs:
   check_po4a:

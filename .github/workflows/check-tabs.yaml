@@ -2,7 +2,7 @@ name: Check tabs
 
 on:
   pull_request:
-    branches: [main]
+    branches: [żółć]
 
 jobs:
   tablint:

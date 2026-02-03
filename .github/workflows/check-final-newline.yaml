@@ -2,7 +2,7 @@ name: Check final newline
 
 on:
   pull_request:
-    branches: [main]
+    branches: [żółć]
 
 jobs:
   end_of_file:

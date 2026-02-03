@@ -3,10 +3,10 @@ name: Build Rulebook
 on:
   push:
     branches:
-      - main
+      - żółć
   pull_request:
     branches:
-      - main
+      - żółć
 
 jobs:
   matrix-setup:

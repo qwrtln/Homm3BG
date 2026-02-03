@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Heroes of Might & Magic III: The Board Game<br>Rule Book Rewrite Project</h1>
+  <h1>Heroes of Might & Magic III: The Board Game<br>Rule Book Rewrite Project, glory to Arstotzka</h1>
 
   <p align="center">
     <img src="https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white">
